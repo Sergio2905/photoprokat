@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <title>Категории товаров</title>
+    <meta charset="UTF-8">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" href="css/style.min.css?_v=20220523130754">
+    <!-- <meta name="robots" content="noindex, nofollow"> -->
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+	<!-- https://developers.google.com/maps/documentation/javascript/adding-a-google-map?hl=ru%2F%3Fq%3D%D1%80%D1%83%D0%BA%D0%BE%D0%B2%D0%BE%D0%B4%D1%81%D1%82%D0%B2%D0%B0#maps_add_map-javascript -->
+	<!-- https://www.youtube.com/watch?v=FhraJC3W9H4&ab_channel=WebDeveloperBlog -->
+	<div class="wrapper">
+		<header class="header">
+    <div class="header__container container">
+        <div class="header__body actions-block">
+            <div class="actions-block__body">
+                <div class="actions-block__item menu-block">
+                    <div class="menu-block__menu menu">
+                        <div class="menu__body">
+                            <button type="button" class="icon-menu">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </button>
+                            <nav class="menu__navigation">
+                                <ul class="menu__list">
+                                    <li class="_title-item">
+                                        <a href="#" class="_title-link"><span></span>Каталог</a>
+                                    </li>
+                                    <li class="menu__item">
+                                        <a href="#" class="menu__link">Камеры</a>
+                                    </li>
+                                    <li class="menu__item">
+                                        <a href="#" class="menu__link">Оптика</a>
+                                    </li>
+                                    <li class="menu__item">
+                                        <a href="#" class="menu__link">Операторное оборудование</a>
+                                    </li>
+                                    <li class="menu__item">
+                                        <a href="#" class="menu__link">Свет</a>
+                                    </li>
+                                    <li class="menu__item">
+                                        <a href="#" class="menu__link">Звуковое оборудование</a>
+                                    </li>
+                                    <li class="menu__item">
+                                        <a href="#" class="menu__link">Для трансляций</a>
+                                    </li>
+                                    <li class="menu__item">
+                                        <a href="#" class="menu__link">Специальное оборудование</a>
+                                    </li>
+                                    <li class="menu__item">
+                                        <a href="#" class="menu__link">Акссесуары</a>
+                                    </li>
+                                    <li class="_title-item">
+                                        <a href="#" class="_title-link"><span></span>Новинки в прокате</a>
+                                    </li>
+                                </ul>
+                                <ul class="menu__list _right-list">
+                                    <li class="menu__item">
+                                        <a href="#" class="menu__link">Как это работает</a>
+                                    </li>
+                                    <li class="menu__item">
+                                        <a href="#" class="menu__link">Правила аренды</a>
+                                    </li>
+                                    <li class="menu__item">
+                                        <a href="#" class="menu__link">Доставка и оплата</a>
+                                    </li>
+                                    <li class="menu__item">
+                                        <a href="#" class="menu__link">Вопросы и ответы</a>
+                                    </li>
+                                    <li class="menu__item">
+                                        <a href="#" class="menu__link">О компании</a>
+                                    </li>
+                                    <li class="menu__item">
+                                        <a href="#" class="menu__link">Новости</a>
+                                    </li>
+                                    <li class="menu__item">
+                                        <a href="#" class="menu__link">Сотрудничество</a>
+                                    </li>
+                                    <li class="menu__item">
+                                        <a href="#" class="menu__link">Договор оферты</a>
+                                    </li>
+                                    <li class="menu__item">
+                                        <a href="#" class="menu__link">Контакты</a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+                <div class="actions-block__item logo-block">
+                    <a href="#" class="logo-block__logo">
+                        <picture><source srcset="./img/logo.webp" type="image/webp"><img src="./img/logo.png" alt="logo"></picture>
+                    </a>
+                </div>
+                <div class="actions-block__item logos-block">
+                    <a href="#" class="logos-block__logo-small">
+                        <picture><source srcset="./img/logo-small.webp" type="image/webp"><img src="./img/logo-small.png" alt="logo"></picture>
+                    </a>
+                </div>
+                <div class="actions-block__item contact-header">
+                    <div class="contact-header__body">
+                        <a href="tel:+74951703918" class="contact-header__link">+7 495 170-39-18</a>
+                        <p class="contact-header__text">Круглосуточно</p>
+                    </div>
+                </div>
+                <div class="actions-block__item favourite-header">
+                    <a href="#" class="favourite-header__icon _icon-star"><span>5</span></a>
+                    <div class="favourite-header__body">
+                        <ul class="favourite-header__list favourite-list"></ul>
+                    </div>
+                </div>
+                <div class="actions-block__item graph-header">
+                    <a href="#" class="graph-header__icon _icon-compare"><span>7</span></a>
+                    <div class="graph-header__body">
+                        <ul class="graph-header__list graph-list"></ul>
+                    </div>
+                </div>
+                <div class="actions-block__item basket-header">
+                    <a href="" class="basket-header__icon _icon-cart"><span>2</span></a>
+                    <div class="basket-header__body">
+                        <ul class="basket-header__list basket-list"></ul>
+                    </div>
+                </div>
+                <div class="actions-block__item search-header">
+                    <div class="search-header__form">
+                        <button type="button" class="search-header__icon _icon-search"></button>
+                        <form action="#" class="search-header__form-form">
+                            <button type="button" class="search-header__icon _icon-search"></button>
+                            <input autocomplete="off" type="text" name="form[]" data-value="Поиск"
+                                class="search-header__input">
+                        </form>
+                    </div>
+                </div>
+                <div class="actions-block__item lock-header">
+                    <a href="#registration" class="lock-header__icon _icon-lock _popup-link" id="open_pop_up"></a>
+                    <div class="lock-header__body">
+                        <ul class="lock-header__list lock-list"></ul>
+                    </div>
+                </div>
+                <div class="actions-block__item account-header">
+                    <a href="#" class="account-header__icon _icon-user _popup-link" id="open_pop_up"></a>
+                    <div class="account-header__body">
+                        <ul class="account-header__list account-list">
+                            <li class="account-list__item"><a href="#" class="account-list__link">Профиль</a>
+                            </li>
+                            <li class="account-list__item"><a href="#" class="account-list__link">Мои заказы</a>
+                            </li>
+                            <li class="account-list__item"><a href="#" class="account-list__link">Мои бонусы</a>
+                            </li>
+                            <li class="_exit"><a href="#" class="_exit">Выйти</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <form action="#" class="header__form-search">
+        <div class="header__form">
+            <input autocomplete="off" type="text" name="form[]" placeholder="Начните поиск"
+                class="header__search-input">
+            <button type="submit" class="header__search-btn">Найти (enter)</button>
+        </div>
+    </form>
+</header>
+		<div class="category-page">
+			<div class="category__container container">
+
+				<div class="breadcrumbs">
+					<a href="#" class="breadcrumbs__link">Главная</a>
+					<a href="#" class="breadcrumbs__link">Каталог</a>
+					<a href="#" class="breadcrumbs__link">Фотокамеры</a>
+				</div>
+
+				<h1 class="category__title page-title">Фотокамеры</h1>
+				<div class="category__info">
+					Отложение, основываясь большей частью на сейсмических данных, не входит
+					своими составляющими, что очевидно, в силы нормальных реакций связей, так же как и абразивный блеск.
+					Следует отметить, что инфлюация значительно характеризует астатический батолит.
+				</div>
+				<div class="category__help">
+					Можно выбрать несколько брендов
+				</div>
+				<div class="category__brands brands">
+					<div class="brands__slider _swiper">
+						<div class="brands__slide">
+							<div class="brands__item">
+								<div class="brands__logo">
+									<picture><source srcset="img/category/brands/g-plus.webp" type="image/webp"><img src="img/category/brands/g-plus.png" alt=""></picture>
+								</div>
+								<div class="brands__check">
+									<div class="brands__checkbox checkbox">
+										<input type="checkbox" name="g-plus">
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="brands__slide swiper-slide">
+							<div class="brands__item">
+								<div class="brands__logo">
+									<picture><source srcset="img/category/brands/bloomberg.webp" type="image/webp"><img src="img/category/brands/bloomberg.png" alt=""></picture>
+								</div>
+								<div class="brands__check">
+									<div class="brands__checkbox checkbox">
+										<input type="checkbox" name="bloomberg">
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="brands__slide swiper-slide">
+							<div class="brands__item">
+								<div class="brands__logo">
+									<picture><source srcset="img/category/brands/dolphin.webp" type="image/webp"><img src="img/category/brands/dolphin.png" alt=""></picture>
+								</div>
+								<div class="brands__check">
+									<div class="brands__checkbox checkbox">
+										<input type="checkbox" name="dolphin">
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="brands__slide swiper-slide">
+							<div class="brands__item">
+								<div class="brands__logo">
+									<picture><source srcset="img/category/brands/disney.webp" type="image/webp"><img src="img/category/brands/disney.png" alt=""></picture>
+								</div>
+								<div class="brands__check">
+									<div class="brands__checkbox checkbox">
+										<input type="checkbox" name="disney">
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="brands__slide swiper-slide">
+							<div class="brands__item">
+								<div class="brands__logo">
+									<picture><source srcset="img/category/brands/cnn.webp" type="image/webp"><img src="img/category/brands/cnn.png" alt=""></picture>
+								</div>
+								<div class="brands__check">
+									<div class="brands__checkbox checkbox">
+										<input type="checkbox" name="cnn">
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="brands__slide swiper-slide">
+							<div class="brands__item">
+								<div class="brands__logo">
+									<picture><source srcset="img/category/brands/pen.webp" type="image/webp"><img src="img/category/brands/pen.png" alt=""></picture>
+								</div>
+								<div class="brands__check">
+									<div class="brands__checkbox checkbox">
+										<input type="checkbox" name="pen">
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="category__find-items">
+					Найдено<span class="category__find-items-count"> 21 </span><span>товаров</span>
+				</div>
+				<div class="category__sort">
+					<div class="category__sort-popular select-box">
+						<div class="options-container">
+							<div class="option">
+								<input type="radio" class="radio" id="week" name="popularity">
+								<label for="week">Неделя</label>
+							</div>
+							<div class="option">
+								<input type="radio" class="radio" id="month" name="popularity">
+								<label for="month">Месяц</label>
+							</div>
+							<div class="option">
+								<input type="radio" class="radio" id="weekend" name="popularity">
+								<label for="weekend">Выходной</label>
+							</div>
+							<div class="option">
+								<input type="radio" class="radio" id="work" name="popularity">
+								<label for="work">Будний</label>
+							</div>
+						</div>
+						<div class="selected">
+							По популярности
+						</div>
+					</div>
+					<div class="category__sort-price select-box">
+						<div class="options-container">
+							<div class="option">
+								<input type="radio" class="radio" id="week" name="price">
+								<label for="week">Неделя</label>
+							</div>
+							<div class="option">
+								<input type="radio" class="radio" id="month" name="price">
+								<label for="month">Месяц</label>
+							</div>
+							<div class="option">
+								<input type="radio" class="radio" id="weekend" name="price">
+								<label for="weekend">Выходной</label>
+							</div>
+							<div class="option">
+								<input type="radio" class="radio" id="work" name="price">
+								<label for="work">Будний</label>
+							</div>
+						</div>
+						<div class="selected">
+							По цене
+						</div>
+					</div>
+				</div>
+				<a href="#" class="category__show-hide-filter">
+					Фильтр
+				</a>
+				<div class="category__goods goods">
+					<div class="goods__catalog">
+						<div class="goods__item">
+							<div class="goods__block">
+								<div class="goods__image">
+									<picture><source srcset="img/category/goods/img1.webp" type="image/webp"><img src="img/category/goods/img1.png" alt=""></picture>
+								</div>
+								<div class="goods__functions">
+									<a href="#" class="goods__link _icon-compare"></a>
+									<a href="#" class="goods__link _icon-star"></a>
+								</div>
+							</div>
+							<div class="goods__info">
+								<h4 class="goods__title">PowerShot SX620 HS</h4>
+								<div class="goods__brand">Canon</div>
+								<div class="goods__price">От <span>1850</span> Р</div>
+							</div>
+							<button class="goods__btn">Подробнее</button>
+						</div>
+						<div class="goods__item">
+							<div class="goods__block">
+								<div class="goods__image">
+									<picture><source srcset="img/category/goods/img2.webp" type="image/webp"><img src="img/category/goods/img2.png" alt=""></picture>
+								</div>
+								<div class="goods__functions">
+									<a href="#" class="goods__link _icon-compare"></a>
+									<a href="#" class="goods__link _icon-star"></a>
+								</div>
+							</div>
+							<div class="goods__info">
+								<h4 class="goods__title">Alpha ILCE-6000 Kit</h4>
+								<div class="goods__brand">Sony</div>
+								<div class="goods__price">От <span>2400</span> Р</div>
+							</div>
+							<button class="goods__btn">Подробнее</button>
+						</div>
+						<div class="goods__item">
+							<div class="goods__block">
+								<div class="goods__image">
+									<picture><source srcset="img/category/goods/img3.webp" type="image/webp"><img src="img/category/goods/img3.png" alt=""></picture>
+								</div>
+								<div class="goods__functions">
+									<a href="#" class="goods__link _icon-compare"></a>
+									<a href="#" class="goods__link _icon-star"></a>
+								</div>
+							</div>
+							<div class="goods__info">
+								<h4 class="goods__title">X-T30 Kit</h4>
+								<div class="goods__brand">Fujifilm</div>
+								<div class="goods__price">От <span>4300</span> Р</div>
+							</div>
+							<button class="goods__btn">Подробнее</button>
+						</div>
+						<div class="goods__item">
+							<div class="goods__block">
+								<div class="goods__image">
+									<picture><source srcset="img/category/goods/img4.webp" type="image/webp"><img src="img/category/goods/img4.png" alt=""></picture>
+								</div>
+								<div class="goods__functions">
+									<a href="#" class="goods__link _icon-compare"></a>
+									<a href="#" class="goods__link _icon-star"></a>
+								</div>
+							</div>
+							<div class="goods__info">
+								<h4 class="goods__title">EOS 4000D Kit</h4>
+								<div class="goods__brand">Canon</div>
+								<div class="goods__price">От <span>3150</span> Р</div>
+							</div>
+							<button class="goods__btn">Подробнее</button>
+						</div>
+						<div class="goods__item">
+							<div class="goods__block">
+								<div class="goods__image">
+									<picture><source srcset="img/category/goods/img5.webp" type="image/webp"><img src="img/category/goods/img5.png" alt=""></picture>
+								</div>
+								<div class="goods__functions">
+									<a href="#" class="goods__link _icon-compare"></a>
+									<a href="#" class="goods__link _icon-star"></a>
+								</div>
+							</div>
+							<div class="goods__info">
+								<h4 class="goods__title">PowerShot SX620 HS</h4>
+								<div class="goods__brand">Canon</div>
+								<div class="goods__price">От <span>1850</span> Р</div>
+							</div>
+							<button class="goods__btn">Подробнее</button>
+						</div>
+						<div class="goods__item">
+							<div class="goods__block">
+								<div class="goods__image">
+									<picture><source srcset="img/category/goods/img6.webp" type="image/webp"><img src="img/category/goods/img6.png" alt=""></picture>
+								</div>
+								<div class="goods__functions">
+									<a href="#" class="goods__link _icon-compare"></a>
+									<a href="#" class="goods__link _icon-star"></a>
+								</div>
+							</div>
+							<div class="goods__info">
+								<h4 class="goods__title">Alpha ILCE-6000 Kit</h4>
+								<div class="goods__brand">Sony</div>
+								<div class="goods__price">От <span>2400</span> Р</div>
+							</div>
+							<button class="goods__btn">Подробнее</button>
+						</div>
+					</div>
+					<div class="goods__filter filter">
+						<div class="filter__block">
+							<h5 class="filter__name">Объектив в комплекте</h5>
+							<div class="filter__options options-radio">
+								<div class="options-radio__item">
+									Да
+									<input type="radio" name="objective" checked value="yes">
+								</div>
+								<div class="options-radio__item">
+									Нет
+									<input type="radio" name="objective" value="no">
+								</div>
+								<div class="options-radio__item">
+									Неважно
+									<input type="radio" name="objective" value="all">
+								</div>
+							</div>
+						</div>
+						<div class="filter__block">
+							<h5 class="filter__name">Формат матрицы</h5>
+							<div class="filter__options options-checkbox">
+								<div class="options-checkbox__item checkbox">
+									4/3 (Four Thirds)
+									<input type="checkbox" name="four-thirds">
+								</div>
+								<div class="options-checkbox__item checkbox">
+									APS-C
+									<input type="checkbox" name="APS-C">
+								</div>
+								<div class="options-checkbox__item checkbox">
+									APS-H
+									<input type="checkbox" name="APS-H">
+								</div>
+								<div class="options-checkbox__item checkbox">
+									Full frame
+									<input type="checkbox" name="full">
+								</div>
+							</div>
+						</div>
+						<div class="filter__block">
+							<h5 class="filter__name">Оптический Zoom</h5>
+							<div class="filter__range">
+								<input type="text" placeholder="От 1">
+								<span>-</span>
+								<input type="text" placeholder="До 60">
+							</div>
+						</div>
+						<div class="filter__block">
+							<h5 class="filter__name">Максимальное разрешение записи видеоролика</h5>
+							<div class="filter__options options-checkbox">
+								<div class="options-checkbox__item checkbox">
+									640x480
+									<input type="checkbox" name="640x480">
+								</div>
+								<div class="options-checkbox__item checkbox">
+									1920x1080
+									<input type="checkbox" name="1920x1080">
+								</div>
+								<div class="options-checkbox__item checkbox">
+									1280x720
+									<input type="checkbox" name="1280x720">
+								</div>
+								<div class="options-checkbox__item checkbox">
+									320x240
+									<input type="checkbox" name="320x240">
+								</div>
+								<div class="options-checkbox__item checkbox">
+									3840x2160
+									<input type="checkbox" name="3840x2160">
+								</div>
+								<a href="" class="filter__more">Показать еще <span>5</span></a>
+							</div>
+						</div>
+						<div class="filter__block">
+							<div class="filter__options options-checkbox">
+								<button class="filter__all">Все фильтры</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<footer class="footer">
+    <section class="footer__subscribe subscribe">
+        <div class="subscribe__container container">
+            <div class="subscribe__body">
+                <div class="subscribe__body-wrapper">
+                    <a href="#" class="subscribe__subscr">
+                        <picture><source srcset="./img/subscribe/01.webp" type="image/webp"><img src="./img/subscribe/01.png" alt="image"></picture>
+                        <p><span>Подпишитесь</span><br>на новости и акции</p>
+                    </a>
+                    <form action="#" class="subscribe__form">
+                        <input autocomplete="off" id="formEmail" type="email" required name="email"
+                            class="subscribe__input _req _email" placeholder="Введите e-mail"
+                            pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" />
+                        <button type="submit" class="subscribe__btn">Подписаться</button>
+                    </form>
+                    <a href="#" class="subscribe__call">
+                        <picture><source srcset="./img/subscribe/02.webp" type="image/webp"><img src="./img/subscribe/02.png" alt="image"></picture>
+                        <span>Заказать звонок</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="subscribe__image _ibg">
+            <picture><source srcset="./img/bg-subscribe.webp" type="image/webp"><img src="./img/bg-subscribe.jpg" alt="cover"></picture>
+        </div>
+    </section>
+    <section class="footer__info info-block">
+        <div class="info-block__container container">
+            <div class="info-block__body">
+                <div class="info-block__other other-block">
+                    <div class="other-block__body">
+                        <div class="other-block__column">
+                            <div class="other-block__text">
+                                <picture><source srcset="./img/logo.webp" type="image/webp"><img src="./img/logo.png" alt="image"></picture>
+                                <p>Самый удобный в Москве сервис <br> аренды фото, видео и кинотехники</p>
+                            </div>
+                        </div>
+                        <div class="other-block__column">
+                            <div class="other-block__social">
+                                <picture><source srcset="./img/social/01.webp" type="image/webp"><img src="./img/social/01.png" alt="image"></picture>
+                                <picture><source srcset="./img/social//02.webp" type="image/webp"><img src="./img/social//02.png" alt="image"></picture>
+                                <picture><source srcset="./img/social/03.webp" type="image/webp"><img src="./img/social/03.png" alt="image"></picture>
+                                <picture><source srcset="./img/social/04.webp" type="image/webp"><img src="./img/social/04.png" alt="image"></picture>
+                                <picture><source srcset="./img/social/05.webp" type="image/webp"><img src="./img/social/05.png" alt="image"></picture>
+                            </div>
+                        </div>
+                        <div class="other-block__column">
+                            <div class="other-block__contact">
+                                <a href="tel:+74951703918" class="contact__link">+7 495 170-39-18</a>
+                                <p class="contact__text">Круглосуточно</p>
+                                <p class="contact__location">г. Москва, Проспект мира, дом 12</p>
+                            </div>
+                        </div>
+                        <div class="other-block__column">
+                            <div class="other-block__pay">
+                                <picture><source srcset="./img/pay/01.webp" type="image/webp"><img src="./img/pay/01.png" alt="image"></picture>
+                                <picture><source srcset="./img/pay//02.webp" type="image/webp"><img src="./img/pay//02.png" alt="image"></picture>
+                                <picture><source srcset="./img/pay/03.webp" type="image/webp"><img src="./img/pay/03.png" alt="image"></picture>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="info-block__basement">
+                    <p>© 2015 – 2019 Fotoprokat 24</p>
+                    <a href="#">Политика конфиденциальности</a>
+                </div>
+            </div>
+        </div>
+    </section>
+</footer>
+	</div>
+
+
+	<!-- Swiper -->
+	<!-- <script src="https://unpkg.com/swiper/swiper-bundle.min.js?_v=20220523130754"></script> -->
+	<script src="js/vendors.min.js?_v=20220523130754"></script>
+	<script src="js/app.min.js?_v=20220523130754"></script>
+</body>
+
+</html>
