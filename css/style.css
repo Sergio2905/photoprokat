@@ -4012,6 +4012,250 @@ body._lock {
   max-width: unset;
 }
 
+.cart-page {
+  padding: 80px 0;
+  flex: 1 1 auto;
+}
+
+.result-cart {
+  padding: 30px 0;
+  display: flex;
+}
+
+.result-cart__item {
+  flex: 1 1 33.333%;
+}
+
+.result-cart__item:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.result-cart__item:nth-child(2) {
+  display: flex;
+  justify-content: center;
+}
+
+.result-cart__item:nth-child(3) {
+  flex: 0 0 320px;
+}
+
+.result-cart__cupon {
+  font-family: "Ubuntu";
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: center;
+  color: #75758A;
+  height: 40px;
+  width: 200px;
+  background: #F5F5F5;
+  border: 1px solid #E3E3E3;
+  box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.15);
+  border-radius: 100px;
+}
+
+.result-cart__btn {
+  font-family: "Ubuntu";
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  text-transform: uppercase;
+  width: 200px;
+}
+
+.price-result-cart__price {
+  font-family: "Ubuntu";
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+  color: #000;
+}
+
+.price-result-cart__price span {
+  position: relative;
+  font-family: "Ubuntu";
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 34px;
+  color: #000;
+  margin-left: 40px;
+}
+
+.price-result-cart__price span::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(270deg, #8EE901 0%, #4F9C2C 99.06%);
+}
+
+.price-result-cart__desc {
+  font-family: "Ubuntu";
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 18px;
+  color: #000;
+  margin: 35px 0 0 98px;
+}
+
+.header-goods-cart {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 100px 200px 1fr minmax(120px, 1fr) 1fr 40px;
+  grid-template-columns: 100px 200px 1fr minmax(120px, 1fr) 1fr 40px;
+  height: 50px;
+  align-items: center;
+}
+
+.header-goods-cart__item {
+  font-family: "Ubuntu";
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: #75758A;
+}
+
+.goods-cart__items {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 100px 200px 1fr minmax(120px, 1fr) 1fr 40px;
+  grid-template-columns: 100px 200px 1fr minmax(120px, 1fr) 1fr 40px;
+}
+
+.goods-cart__items:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.goods-cart__items:not(:first-child) .goods-cart__header {
+  display: none;
+}
+
+.goods-cart__header {
+  font-family: "Ubuntu";
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: #75758A;
+  height: 50px;
+  display: flex;
+  align-items: center;
+}
+
+.goods-cart__block {
+  display: flex;
+  align-items: center;
+  height: 80px;
+  border-bottom: 1px solid #EFEFEF;
+}
+
+.goods-cart__delete {
+  width: 40px;
+  height: 40px;
+}
+
+.goods-cart__image {
+  width: 80px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+}
+
+.goods-cart__image img {
+  width: 100%;
+}
+
+.goods-cart__name {
+  font-family: "Ubuntu";
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 20px;
+  color: #000;
+}
+
+.goods-cart__brand {
+  font-family: "Ubuntu";
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: #75758A;
+}
+
+.goods-cart__price {
+  font-family: "Ubuntu";
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  color: #60B021;
+}
+
+.goods-cart__count {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 120px;
+  height: 40px;
+  background: #F7F7F7;
+  border: 1px solid #E3E3E3;
+  box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.15);
+  border-radius: 100px;
+}
+
+.goods-cart__count input {
+  height: 100%;
+  background: none;
+  width: 50px;
+}
+
+.goods-cart__count input::-moz-placeholder {
+  font-family: "Ubuntu";
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #000000;
+}
+
+.goods-cart__count input:-ms-input-placeholder {
+  font-family: "Ubuntu";
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #000000;
+}
+
+.goods-cart__count input::placeholder {
+  font-family: "Ubuntu";
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #000000;
+}
+
+.goods-cart__plus,
+.goods-cart__minus {
+  width: 30px;
+  height: 30px;
+  background: linear-gradient(180deg, #8EE902 0%, #4F9C2C 100%);
+  border-radius: 50%;
+  color: #fff;
+  padding: 0 11px;
+}
+
+.goods-cart__result {
+  font-family: "Ubuntu";
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  color: #000000;
+}
+
 .registration-page {
   padding: 80px 0;
   flex: 1 1 auto;
@@ -4588,6 +4832,277 @@ body._lock {
   margin: 0 auto;
 }
 
+.comparison-page {
+  padding: 80px 0;
+  flex: 1 1 auto;
+}
+
+.comparison__title span {
+  background: linear-gradient(270deg, #8EE901 0%, #4F9C2C 99.06%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.header-comperison {
+  position: relative;
+  padding: 30px 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.header-comperison__links {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.header-comperison__link {
+  font-family: "Ubuntu";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  color: #75758A;
+  display: block;
+}
+
+.header-comperison__link:hover {
+  color: #60B021;
+}
+
+.header-comperison__link.active {
+  color: #60B021;
+}
+
+.header-comperison__link:not(:last-child) {
+  margin-right: 20px;
+}
+
+.header-comperison__link:not(:last-child):not(:last-child) {
+  margin: 0;
+}
+
+.check-comperison__item {
+  font-family: "Ubuntu";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  color: #75758A;
+  position: relative;
+  cursor: pointer;
+  padding-right: 40px;
+}
+
+.check-comperison__item input {
+  display: none;
+}
+
+.check-comperison__item::before {
+  position: absolute;
+  content: "";
+  top: -1px;
+  right: 0;
+  border-radius: 50%;
+  width: 32px;
+  height: 18px;
+  border: 1px solid #E3E3E3;
+  background: #F5F5F5;
+  transition: all 0.3s linear;
+  border-radius: 50px;
+  transition: all 0.3s linear;
+}
+
+.check-comperison__item::after {
+  position: absolute;
+  content: "";
+  top: 2px;
+  right: 16px;
+  border-radius: 50%;
+  width: 12px;
+  height: 12px;
+  background: #fff;
+  transition: all 0.3s linear;
+}
+
+.check-comperison__item.active::before {
+  background: #60B021;
+}
+
+.check-comperison__item.active::after {
+  right: 4px;
+}
+
+.header-comperison__icons {
+  display: none;
+}
+
+.comperison__table {
+  position: relative;
+  display: flex;
+}
+
+.var-comparison {
+  position: relative;
+  min-width: 240px;
+}
+
+.var-comparison__delete {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-family: "Ubuntu";
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 26px;
+  color: #000000;
+  cursor: pointer;
+}
+
+.var-comparison__item {
+  font-family: "Ubuntu";
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: #75758A;
+  width: 150px;
+}
+
+.var-comparison__item:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.var-comparison__model {
+  display: flex;
+  align-items: flex-end;
+  height: 140px;
+}
+
+.var-comparison__prices {
+  font-weight: 700;
+  line-height: 22px;
+  text-transform: uppercase;
+  color: #000;
+}
+
+.var-comparison__price {
+  font-family: "Ubuntu";
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  text-transform: none;
+  color: #75758A;
+  padding: 5px 0;
+}
+
+.items-comparison {
+  position: relative;
+  width: 100%;
+}
+
+.slide-comparison__item {
+  position: relative;
+  width: 240px;
+  font-family: "Ubuntu";
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: #000;
+}
+
+.slide-comparison__item:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.slide-comparison__delete {
+  font-size: 24px;
+  position: absolute;
+  top: 0;
+  right: 40%;
+  transform: rotate(45deg);
+  color: #75758A;
+}
+
+.slide-comparison__model {
+  padding-bottom: 20px;
+}
+
+.slide-comparison__image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 100px;
+}
+
+.slide-comparison__image img {
+  width: 100%;
+}
+
+.slide-comparison__name {
+  font-weight: 700;
+}
+
+.slide-comparison__brand {
+  font-weight: 400;
+  color: #75758A;
+}
+
+.slide-comparison__prices {
+  padding-top: 21px;
+}
+
+.slide-comparison__price {
+  color: #60B021;
+  padding: 5px 0;
+}
+
+.comperison__vars {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: none;
+}
+
+.comperison__vars .var-comparison__model {
+  font-size: 0 !important;
+  height: 160px;
+}
+
+.comperison__vars .var-comparison__price {
+  height: 70px;
+  padding: 10px 0 0 0;
+  text-transform: uppercase;
+  font-size: 12px;
+}
+
+.comperison__vars .var-comparison__item-title {
+  height: 50px;
+  display: flex;
+  align-items: center;
+  font-family: "Ubuntu";
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 20px;
+  text-transform: uppercase;
+  color: #000;
+}
+
+.comperison__vars .var-comparison__item {
+  text-transform: uppercase;
+  font-size: 12px;
+  width: 100%;
+  border-bottom: 1px solid #EFEFEF;
+}
+
+.comperison__vars .var-comparison__item:not(.var-comparison__model, .var-comparison__prices) {
+  height: 70px;
+  padding: 10px 0 0 0;
+}
+
 @media (min-width: 991.98px) {
   .quantity__button:hover::before,
   .quantity__button:hover::after {
@@ -4948,6 +5463,10 @@ body._lock {
     padding: 0 calc(10px + 13 * (100vw - 320px) / 820);
   }
 
+  .cart-page {
+    padding: calc(30px + 50 * (100vw - 320px) / 820) 0;
+  }
+
   .registration-page {
     padding: calc(30px + 50 * (100vw - 320px) / 820) 0;
   }
@@ -4961,6 +5480,10 @@ body._lock {
   }
 
   .confirmation-page {
+    padding: calc(30px + 50 * (100vw - 320px) / 820) 0;
+  }
+
+  .comparison-page {
     padding: calc(30px + 50 * (100vw - 320px) / 820) 0;
   }
 }
@@ -5347,6 +5870,32 @@ body._lock {
     min-width: auto;
   }
 
+  .result-cart {
+    flex-wrap: wrap;
+  }
+
+  .result-cart__item {
+    flex: 0 0 50%;
+  }
+
+  .goods-cart__items:not(:first-child) .goods-cart__header {
+    display: flex;
+  }
+
+  .goods-cart__items {
+    -ms-grid-columns: 150px (1fr)[2];
+    grid-template-columns: 150px repeat(2, 1fr);
+    -ms-grid-rows: (140px)[2];
+    grid-template-rows: repeat(2, 140px);
+    border-bottom: 1px solid #EFEFEF;
+  }
+
+  .goods-cart__block {
+    border: none;
+    height: 70px;
+    align-items: flex-start;
+  }
+
   .reg-form__info {
     max-width: 100%;
   }
@@ -5362,6 +5911,67 @@ body._lock {
 
   .confirmation-card {
     max-height: 150px;
+  }
+
+  .header-comperison__links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    position: absolute;
+    top: 100%;
+    left: -100%;
+    width: 50%;
+    background: #fff;
+    z-index: 10;
+    padding: 30px 0;
+    opacity: 0;
+    transition: all 0.3s linear;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  }
+
+  .header-comperison__links.active {
+    opacity: 1;
+    left: 0;
+  }
+
+  .header-comperison__icons {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+  }
+
+  .var-comparison {
+    display: none;
+  }
+
+  .var-comparison__delete {
+    display: none;
+  }
+
+  .slide-comparison__item:not(.slide-comparison__prices, .slide-comparison__model) {
+    height: 70px;
+    display: flex;
+    align-items: flex-end;
+  }
+
+  .slide-comparison__item:nth-child(3) {
+    margin-top: 65px;
+  }
+
+  .slide-comparison__price {
+    height: 70px;
+    display: flex;
+    align-items: flex-end;
+    padding-bottom: 10px;
+  }
+
+  .slide-comparison__price:first-child {
+    margin-top: 25px;
+  }
+
+  .comperison__vars {
+    display: block;
   }
 }
 
@@ -5504,6 +6114,23 @@ body._lock {
     grid-template-columns: repeat(1, 1fr);
   }
 
+  .goods-cart__items {
+    -ms-grid-columns: (1fr)[2];
+    grid-template-columns: repeat(2, 1fr);
+    -ms-grid-rows: 140px (100px)[2];
+    grid-template-rows: 140px repeat(2, 100px);
+  }
+
+  .goods-cart__item:last-child .goods-cart__block {
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+  }
+
+  .goods-cart__item:last-child .goods-cart__header {
+    display: none;
+  }
+
   .contacts__pickup-points {
     flex-direction: column;
     gap: 30px;
@@ -5524,6 +6151,10 @@ body._lock {
 
   .options-checkbox__item span {
     text-align: right;
+  }
+
+  .slide-comparison__item {
+    width: 200px;
   }
 }
 
