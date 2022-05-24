@@ -5,7 +5,7 @@
     <title>Новости компании</title>
     <meta charset="UTF-8">
     <meta name="format-detection" content="telephone=no">
-    <link rel="stylesheet" href="css/style.min.css?_v=20220524003734">
+    <link rel="stylesheet" href="css/style.min.css?_v=20220524205005">
     <!-- <meta name="robots" content="noindex, nofollow"> -->
     <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"> -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -173,32 +173,141 @@
 
 				<div class="cart__breadcrumbs breadcrumbs">
 					<a href="#" class="breadcrumbs__link">Главная</a>
-					<a href="#" class="breadcrumbs__link">Новости компании</a>
+					<a href="#" class="breadcrumbs__link">Корзина</a>
 				</div>
 
 				<h1 class="cart__title page-title">
 					Корзина
 				</h1>
 
-				<div class="cart__body">
-
-					<div class="cart__date">
-						<div class="cart__date-start"></div>
-						<div class="cart__date-end"></div>
-					</div>
-
-					<div class="cart__details cart-details">
-						<div class="cart-details__header">
-							<div class="cart-details__header-item">
-
+				<form action="" class="cart__body">
+					<div class="cart__date"></div>
+					<div class="cart__goods goods-cart">
+						<div class="goods-cart__table">
+							<div class="goods-cart__items">
+								<div class="goods-cart__item">
+									<div class="goods-cart__header">Фото</div>
+									<div class="goods-cart__block">
+										<div class="goods-cart__image">
+											<picture><source srcset="img/category/goods/img1.webp" type="image/webp"><img src="img/category/goods/img1.png" alt="image"></picture>
+										</div>
+									</div>
+								</div>
+								<div class="goods-cart__item">
+									<div class="goods-cart__header">Название</div>
+									<div class="goods-cart__block">
+										<div class="goods-cart__good">
+											<div class="goods-cart__name">PowerShot SX620 HS</div>
+											<div class="goods-cart__brand">Canon</div>
+										</div>
+									</div>
+								</div>
+								<div class="goods-cart__item">
+									<div class="goods-cart__header">Цена за месяц</div>
+									<div class="goods-cart__block">
+										<div class="goods-cart__price">
+											10 800 Р
+										</div>
+									</div>
+								</div>
+								<div class="goods-cart__item">
+									<div class="goods-cart__header">Количество</div>
+									<div class="goods-cart__block">
+										<div class="goods-cart__count">
+											<button class="goods-cart__plus" type="button">+</button>
+											<input type="text" disabled placeholder="4">
+											<button class="goods-cart__minus" type="button">-</button>
+										</div>
+									</div>
+								</div>
+								<div class="goods-cart__item">
+									<div class="goods-cart__header">Итого</div>
+									<div class="goods-cart__block">
+										<div class="goods-cart__result">
+											176 400 Р
+										</div>
+									</div>
+								</div>
+								<div class="goods-cart__item">
+									<div class="goods-cart__header"></div>
+									<div class="goods-cart__block">
+										<button class="goods-cart__delete btn_white" type="button">D</button>
+									</div>
+								</div>
+							</div>
+							<div class="goods-cart__items">
+								<div class="goods-cart__item">
+									<div class="goods-cart__header">Фото</div>
+									<div class="goods-cart__block">
+										<div class="goods-cart__image">
+											<picture><source srcset="img/category/goods/img2.webp" type="image/webp"><img src="img/category/goods/img2.png" alt="image"></picture>
+										</div>
+									</div>
+								</div>
+								<div class="goods-cart__item">
+									<div class="goods-cart__header">Название</div>
+									<div class="goods-cart__block">
+										<div class="goods-cart__good">
+											<div class="goods-cart__name">PowerShot SX620 HS</div>
+											<div class="goods-cart__brand">Canon</div>
+										</div>
+									</div>
+								</div>
+								<div class="goods-cart__item">
+									<div class="goods-cart__header">Цена за месяц</div>
+									<div class="goods-cart__block">
+										<div class="goods-cart__price">
+											10 800 Р
+										</div>
+									</div>
+								</div>
+								<div class="goods-cart__item">
+									<div class="goods-cart__header">Количество</div>
+									<div class="goods-cart__block">
+										<div class="goods-cart__count">
+											<button class="goods-cart__plus" type="button">+</button>
+											<input type="text" disabled placeholder="4">
+											<button class="goods-cart__minus" type="button">-</button>
+										</div>
+									</div>
+								</div>
+								<div class="goods-cart__item">
+									<div class="goods-cart__header">Итого</div>
+									<div class="goods-cart__block">
+										<div class="goods-cart__result">
+											176 400 Р
+										</div>
+									</div>
+								</div>
+								<div class="goods-cart__item">
+									<div class="goods-cart__header"></div>
+									<div class="goods-cart__block">
+										<button class="goods-cart__delete btn_white" type="button">D</button>
+									</div>
+								</div>
 							</div>
 						</div>
-						<div class="cart-details__item"></div>
-						<div class="cart-details__item"></div>
 					</div>
-					<div class="cart__result"></div>
+					<div class="cart__result result-cart">
+						<div class="result-cart__item">
+							<input class="result-cart__cupon" type="text" placeholder="Номер купона"></input>
+						</div>
+						<div class="result-cart__item">
+							<button class="result-cart__btn btn_green" type="submit">Оформить заказ</button>
+						</div>
+						<div class="result-cart__item">
+							<div class="result-cart__price price-result-cart">
+								<div class="price-result-cart__price">
+									Итого: <span>219 600 Р</span>
+								</div>
+								<div class="price-result-cart__desc">
+									Цена указана за 184 суток
+								</div>
+							</div>
+						</div>
 
-				</div>
+					</div>
+				</form>
 
 			</div>
 
@@ -276,9 +385,9 @@
 
 
 		<!-- Swiper -->
-		<!-- <script src="https://unpkg.com/swiper/swiper-bundle.min.js?_v=20220524003734"></script> -->
-		<script src="js/vendors.min.js?_v=20220524003734"></script>
-		<script src="js/app.min.js?_v=20220524003734"></script>
+		<!-- <script src="https://unpkg.com/swiper/swiper-bundle.min.js?_v=20220524205005"></script> -->
+		<script src="js/vendors.min.js?_v=20220524205005"></script>
+		<script src="js/app.min.js?_v=20220524205005"></script>
 </body>
 
 </html>
