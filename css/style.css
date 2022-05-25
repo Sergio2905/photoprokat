@@ -2,8 +2,6 @@
 
 @import url(https://fonts.googleapis.com/css?family=Ubuntu:300,300italic,regular,italic,500,500italic,700,700italic);
 
-@import url(https://fonts.googleapis.com/css?family=Montserrat:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic);
-
 @font-face {
   font-family: "icons";
   font-display: swap;
@@ -31,62 +29,76 @@
   display: block;
 }
 
-._icon-lock:before {
-  content: "\e90b";
-}
-
-._icon-arrow-left:before {
+._icon-wallet:before {
   content: "\e900";
 }
 
-._icon-compare:before {
+._icon-clock:before {
   content: "\e901";
 }
 
-._icon-delete:before {
+._icon-user2:before {
   content: "\e902";
 }
 
-._icon-group:before {
+._icon-bottom:before {
   content: "\e903";
 }
 
-._icon-phone:before {
+._icon-calendar:before {
   content: "\e904";
 }
 
-._icon-cart:before {
+._icon-compare:before {
   content: "\e905";
 }
 
-._icon-arrow-right:before {
+._icon-delete:before {
   content: "\e906";
 }
 
-._icon-star:before {
+._icon-menu:before {
   content: "\e907";
 }
 
-._icon-search:before {
+._icon-rss:before {
   content: "\e908";
-  color: #000000;
 }
 
-._icon-user:before {
+._icon-lock:before {
   content: "\e909";
 }
 
-._icon-cart-1:before {
+._icon-phone:before {
   content: "\e90a";
-  color: #fff;
 }
 
-._icon-cog:before {
-  content: "\e994";
+._icon-cart:before {
+  content: "\e90b";
 }
 
-._icon-question:before {
-  content: "\ea09";
+._icon-top:before {
+  content: "\e90c";
+}
+
+._icon-star:before {
+  content: "\e90d";
+}
+
+._icon-search:before {
+  content: "\e90e";
+}
+
+._icon-user:before {
+  content: "\e90f";
+}
+
+._icon-Vector-5:before {
+  content: "\e910";
+}
+
+._icon-check:before {
+  content: "\e911";
 }
 
 * {
@@ -900,7 +912,7 @@ body.ie ._ibg img {
 
 .popup::before {
   content: "";
-  background-color: rgba(117, 117, 138, 0.4862745098);
+  background-color: rgba(0, 0, 0, 0.7);
   position: fixed;
   width: 100%;
   height: 100%;
@@ -960,24 +972,56 @@ body.ie ._ibg img {
   border-radius: 15px;
 }
 
-.no-webp .popup__close{
-  background: url("../../img/close-1.png") 0 0 no-repeat; }
-
 .popup__close {
   width: 24px;
   height: 24px;
+  background: #000;
+  border-radius: 50%;
   position: absolute;
   top: -10px;
   right: -10px;
   cursor: pointer;
   z-index: 30;
+  color: #fff;
 }
 
-.login__title {
-  font-size: 16px;
-  line-height: 137.5%;
-  font-weight: 700;
+.popup__close span {
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  width: 100%;
+  height: 100%;
+  transform: rotate(45deg);
+  font-size: 22px;
+}
+
+.popup__message {
+  font-family: "Ubuntu";
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
   text-align: center;
+  color: #75758A;
+  padding: 20px 0;
+}
+
+.popup__btn {
+  width: 80%;
+  margin: 20px auto;
+}
+
+.popup__checkbox {
+  padding-left: 20px !important;
+}
+
+.popup__title {
+  font-family: "Ubuntu";
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 22px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #000000;
 }
 
 .login__social {
@@ -2706,6 +2750,51 @@ body._lock {
   flex-direction: column;
 }
 
+.btn_green {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 22px;
+  height: 40px;
+  font-family: "Ubuntu";
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: center;
+  color: #fff;
+  background: linear-gradient(180deg, #8EE902 0%, #4F9C2C 100%);
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.2);
+  border-radius: 100px;
+}
+
+.btn_green:hover {
+  background: #4F9C2C;
+  box-shadow: none;
+}
+
+.btn_white {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 22px;
+  height: 40px;
+  font-family: "Ubuntu";
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: center;
+  color: #000;
+  background: #fff;
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.3);
+  border-radius: 100px;
+}
+
+.btn_white:hover {
+  color: #fff;
+  background: #75758A;
+  box-shadow: none;
+}
+
 .breadcrumbs {
   position: relative;
   padding: 47px 0 7px;
@@ -2785,12 +2874,18 @@ body._lock {
   padding: 10px;
 }
 
-.brands__slide {
-  display: flex;
-  justify-content: center;
+.brands__logo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
-.brands__item {
+.brands__logo img {
+  width: 100%;
+}
+
+.brands__check {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -2799,35 +2894,23 @@ body._lock {
   height: 160px;
   background: #FFFFFF;
   box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.15);
-}
-
-.brands__item.active {
-  box-shadow: 0px 0px 8px rgba(255, 6, 6, 0.76);
-}
-
-.brands__logo {
-  position: relative;
-}
-
-.brands__check {
-  position: absolute;
-  right: 20px;
-  bottom: 20px;
+  cursor: pointer;
 }
 
 .brands__checkbox {
-  width: 20px;
-  height: 20px;
+  position: absolute;
+  width: 100%;
+  height: 100%;
   cursor: pointer;
 }
 
 .brands__checkbox::before {
   position: absolute;
-  top: 0;
-  left: 0;
+  right: 20px;
+  bottom: 20px;
   content: "";
-  width: 100%;
-  height: 100%;
+  width: 20px;
+  height: 20px;
   background: #C9C9C9;
   border-radius: 50%;
   border: 1px solid #E3E3E3;
@@ -2835,14 +2918,14 @@ body._lock {
 }
 
 .brands__checkbox::after {
-  content: "✓";
+  font-family: "icons";
+  content: "\e911";
   color: #fff;
   position: absolute;
   text-align: center;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  right: 22px;
+  bottom: 22px;
+  font-size: 15px;
   transition: all 0.3s linear;
 }
 
@@ -3123,11 +3206,13 @@ body._lock {
 }
 
 .options-checkbox__item::after {
-  content: "✓";
+  font-family: "icons";
+  font-size: 10px;
+  content: "\e911";
   color: #fff;
   position: absolute;
   top: 0;
-  left: 0;
+  left: 2px;
   width: 12px;
   height: 12px;
   opacity: 0;
@@ -3418,7 +3503,7 @@ body._lock {
 }
 
 .account__block.active {
-  max-height: 1500px;
+  max-height: unset;
   opacity: 1;
   transform: translate(0, 0);
   -webkit-animation: showAccountBlock 0.5s;
@@ -3495,6 +3580,26 @@ body._lock {
     opacity: 0;
     transform: translate(-100%, 0);
   }
+}
+
+.goods-cart__again {
+  width: 160px;
+}
+
+.goods-cart__how-many {
+  font-family: "Ubuntu";
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: #000000;
+}
+
+.goods-cart__period {
+  font-family: "Ubuntu";
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: #000000;
 }
 
 .news-page {
@@ -3632,6 +3737,11 @@ body._lock {
   text-align: right;
   text-transform: uppercase;
   color: #000000;
+  transition: all 0.3s linear;
+}
+
+.sidebar__news-cat-link:hover {
+  color: #60B021;
 }
 
 .sidebar__news-cat-link:not(:last-child) {
@@ -3685,6 +3795,13 @@ body._lock {
   flex: 0 0 425px;
   background: #FFFFFF;
   border: 1px solid #EFEFEF;
+  max-height: 500px;
+}
+
+.social-block__body {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
 }
 
 .position-page__info {
@@ -3713,7 +3830,7 @@ body._lock {
   width: 245px;
   max-width: 245px;
   height: 220px;
-  margin: 50px 0;
+  margin: 50px 0 0;
 }
 
 .image-block__image {
@@ -4012,6 +4129,33 @@ body._lock {
   max-width: unset;
 }
 
+.tags-media__body {
+  margin: 50px 0 20px;
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.tags-media__item {
+  display: flex;
+  align-items: flex-end;
+}
+
+.tags-media__item .tags-media__link {
+  font-family: "Ubuntu";
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+  color: #000000;
+}
+
+.tags-media__item:nth-child(odd) .tags-media__link {
+  font-family: "Ubuntu";
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+}
+
 .cart-page {
   padding: 80px 0;
   flex: 1 1 auto;
@@ -4120,8 +4264,8 @@ body._lock {
 .goods-cart__items {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 100px 200px 1fr minmax(120px, 1fr) 1fr 40px;
-  grid-template-columns: 100px 200px 1fr minmax(120px, 1fr) 1fr 40px;
+  -ms-grid-columns: 100px 200px 1fr minmax(120px, 1fr) 1fr 130px;
+  grid-template-columns: 100px 200px 1fr minmax(120px, 1fr) 1fr 130px;
 }
 
 .goods-cart__items:not(:last-child) {
@@ -4608,40 +4752,6 @@ body._lock {
   width: 140px;
 }
 
-.btn_green {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 22px;
-  height: 40px;
-  font-family: "Ubuntu";
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 16px;
-  text-align: center;
-  color: #fff;
-  background: linear-gradient(180deg, #8EE902 0%, #4F9C2C 100%);
-  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.2);
-  border-radius: 100px;
-}
-
-.btn_white {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 22px;
-  height: 40px;
-  font-family: "Ubuntu";
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 16px;
-  text-align: center;
-  color: #000;
-  background: #fff;
-  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.3);
-  border-radius: 100px;
-}
-
 .confirmation-page {
   padding: 80px 0;
   flex: 1 1 auto;
@@ -4688,6 +4798,7 @@ body._lock {
 }
 
 .confirmation-card__icon {
+  font-size: 26px;
   text-align: right;
 }
 
@@ -4938,6 +5049,19 @@ body._lock {
   display: none;
 }
 
+.header-comperison__icon {
+  color: #000;
+  transition: all 0.3s linear;
+}
+
+.header-comperison__icon:hover {
+  color: #60B021;
+}
+
+.comperison__body {
+  margin-bottom: 100px;
+}
+
 .comperison__table {
   position: relative;
   display: flex;
@@ -4958,6 +5082,11 @@ body._lock {
   line-height: 26px;
   color: #000000;
   cursor: pointer;
+  transition: all 0.3s linear;
+}
+
+.var-comparison__delete:hover {
+  color: #60B021;
 }
 
 .var-comparison__item {
@@ -5101,6 +5230,473 @@ body._lock {
 .comperison__vars .var-comparison__item:not(.var-comparison__model, .var-comparison__prices) {
   height: 70px;
   padding: 10px 0 0 0;
+}
+
+.xdsoft_datetimepicker {
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.15);
+  background: #fff;
+  color: #333;
+  padding: 8px;
+  padding-left: 0;
+  padding-top: 2px;
+  position: absolute;
+  z-index: 9999;
+  box-sizing: border-box;
+  display: none;
+}
+
+.xdsoft_datetimepicker.xdsoft_rtl {
+  padding: 8px 0 8px 8px;
+}
+
+.xdsoft_datetimepicker iframe {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 75px;
+  height: 210px;
+  background: transparent;
+  border: none;
+}
+
+/*For IE8 or lower*/
+
+.xdsoft_datetimepicker button {
+  border: none !important;
+}
+
+.xdsoft_noselect {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+
+.xdsoft_noselect::-moz-selection {
+  background: transparent;
+}
+
+.xdsoft_noselect::selection {
+  background: transparent;
+}
+
+.xdsoft_noselect::-moz-selection {
+  background: transparent;
+}
+
+.xdsoft_datetimepicker.xdsoft_inline {
+  display: inline-block;
+  position: static;
+  box-shadow: none;
+}
+
+.xdsoft_datetimepicker * {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.xdsoft_datetimepicker .xdsoft_datepicker,
+.xdsoft_datetimepicker .xdsoft_timepicker {
+  display: none;
+}
+
+.xdsoft_datetimepicker .xdsoft_datepicker.active,
+.xdsoft_datetimepicker .xdsoft_timepicker.active {
+  display: block;
+}
+
+.xdsoft_datetimepicker .xdsoft_datepicker {
+  width: 224px;
+  float: left;
+  margin-left: 8px;
+}
+
+.xdsoft_datetimepicker.xdsoft_rtl .xdsoft_datepicker {
+  float: right;
+  margin-right: 8px;
+  margin-left: 0;
+}
+
+.xdsoft_datetimepicker.xdsoft_showweeks .xdsoft_datepicker {
+  width: 256px;
+}
+
+.xdsoft_datetimepicker .xdsoft_timepicker {
+  width: 58px;
+  float: left;
+  text-align: center;
+  margin-left: 8px;
+  margin-top: 0;
+}
+
+.xdsoft_datetimepicker.xdsoft_rtl .xdsoft_timepicker {
+  float: right;
+  margin-right: 8px;
+  margin-left: 0;
+}
+
+.xdsoft_datetimepicker .xdsoft_datepicker.active + .xdsoft_timepicker {
+  margin-top: 8px;
+  margin-bottom: 3px;
+}
+
+.xdsoft_datetimepicker .xdsoft_monthpicker {
+  position: relative;
+  text-align: center;
+}
+
+.no-webp .xdsoft_datetimepicker .xdsoft_label i, .no-webp .xdsoft_datetimepicker .xdsoft_prev, .no-webp .xdsoft_datetimepicker .xdsoft_next, .no-webp .xdsoft_datetimepicker .xdsoft_today_button{
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAAAeCAYAAADaW7vzAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoV2luZG93cykiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6Q0NBRjI1NjM0M0UwMTFFNDk4NkFGMzJFQkQzQjEwRUIiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6Q0NBRjI1NjQ0M0UwMTFFNDk4NkFGMzJFQkQzQjEwRUIiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDpDQ0FGMjU2MTQzRTAxMUU0OTg2QUYzMkVCRDNCMTBFQiIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDpDQ0FGMjU2MjQzRTAxMUU0OTg2QUYzMkVCRDNCMTBFQiIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PoNEP54AAAIOSURBVHja7Jq9TsMwEMcxrZD4WpBYeKUCe+kTMCACHZh4BFfHO/AAIHZGFhYkBBsSEqxsLCAgXKhbXYOTxh9pfJVP+qutnZ5s/5Lz2Y5I03QhWji2GIcgAokWgfCxNvcOCCGKqiSqhUp0laHOne05vdEyGMfkdxJDVjgwDlEQgYQBgx+ULJaWSXXS6r/ER5FBVR8VfGftTKcITNs+a1XpcFoExREIDF14AVIFxgQUS+h520cdud6wNkC0UBw6BCO/HoCYwBhD8QCkQ/x1mwDyD4plh4D6DDV0TAGyo4HcawLIBBSLDkHeH0Mg2yVP3l4TQMZQDDsEOl/MgHQqhMNuE0D+oBh0CIr8MAKyazBH9WyBuKxDWgbXfjNf32TZ1KWm/Ap1oSk/R53UtQ5xTh3LUlMmT8gt6g51Q9p+SobxgJQ/qmsfZhWywGFSl0yBjCLJCMgXail3b7+rumdVJ2YRss4cN+r6qAHDkPWjPjdJCF4n9RmAD/V9A/Wp4NQassDjwlB6XBiCxcJQWmZZb8THFilfy/lfrTvLghq2TqTHrRMTKNJ0sIhdo15RT+RpyWwFdY96UZ/LdQKBGjcXpcc1AlSFEfLmouD+1knuxBDUVrvOBmoOC/rEcN7OQxKVeJTCiAdUzUJhA2Oez9QTkp72OTVcxDcXY8iKNkxGAJXmJCOQwOa6dhyXsOa6XwEGAKdeb5ET3rQdAAAAAElFTkSuQmCC); }
+
+.xdsoft_datetimepicker .xdsoft_label i {
+  opacity: 0.5;
+  background-position: -92px -19px;
+  display: inline-block;
+  width: 9px;
+  height: 20px;
+  vertical-align: middle;
+}
+
+.xdsoft_datetimepicker .xdsoft_prev {
+  float: left;
+  background-position: -20px 0;
+}
+
+.xdsoft_datetimepicker .xdsoft_today_button {
+  float: left;
+  background-position: -70px 0;
+  margin-left: 5px;
+}
+
+.xdsoft_datetimepicker .xdsoft_next {
+  float: right;
+  background-position: 0 0;
+}
+
+.xdsoft_datetimepicker .xdsoft_next,
+.xdsoft_datetimepicker .xdsoft_prev,
+.xdsoft_datetimepicker .xdsoft_today_button {
+  background-color: transparent;
+  background-repeat: no-repeat;
+  border: 0 none;
+  cursor: pointer;
+  display: block;
+  height: 30px;
+  opacity: 0.5;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+  outline: medium none;
+  overflow: hidden;
+  padding: 0;
+  position: relative;
+  text-indent: 100%;
+  white-space: nowrap;
+  width: 20px;
+  min-width: 0;
+}
+
+.xdsoft_datetimepicker .xdsoft_timepicker .xdsoft_prev,
+.xdsoft_datetimepicker .xdsoft_timepicker .xdsoft_next {
+  float: none;
+  background-position: -40px -15px;
+  height: 15px;
+  width: 30px;
+  display: block;
+  margin-left: 14px;
+  margin-top: 7px;
+}
+
+.xdsoft_datetimepicker.xdsoft_rtl .xdsoft_timepicker .xdsoft_prev,
+.xdsoft_datetimepicker.xdsoft_rtl .xdsoft_timepicker .xdsoft_next {
+  float: none;
+  margin-left: 0;
+  margin-right: 14px;
+}
+
+.xdsoft_datetimepicker .xdsoft_timepicker .xdsoft_prev {
+  background-position: -40px 0;
+  margin-bottom: 7px;
+  margin-top: 0;
+}
+
+.xdsoft_datetimepicker .xdsoft_timepicker .xdsoft_time_box {
+  height: 151px;
+  overflow: hidden;
+  border-bottom: 1px solid #ddd;
+}
+
+.xdsoft_datetimepicker .xdsoft_timepicker .xdsoft_time_box > div > div {
+  background: #f5f5f5;
+  border-top: 1px solid #ddd;
+  color: #666;
+  font-size: 12px;
+  text-align: center;
+  border-collapse: collapse;
+  cursor: pointer;
+  border-bottom-width: 0;
+  height: 25px;
+  line-height: 25px;
+}
+
+.xdsoft_datetimepicker .xdsoft_timepicker .xdsoft_time_box > div > div:first-child {
+  border-top-width: 0;
+}
+
+.xdsoft_datetimepicker .xdsoft_today_button:hover,
+.xdsoft_datetimepicker .xdsoft_next:hover,
+.xdsoft_datetimepicker .xdsoft_prev:hover {
+  opacity: 1;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+}
+
+.xdsoft_datetimepicker .xdsoft_label {
+  display: inline;
+  position: relative;
+  z-index: 9999;
+  margin: 0;
+  padding: 5px 3px;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: bold;
+  background-color: #fff;
+  float: left;
+  width: 182px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.xdsoft_datetimepicker .xdsoft_label:hover > span {
+  text-decoration: underline;
+}
+
+.xdsoft_datetimepicker .xdsoft_label:hover i {
+  opacity: 1;
+}
+
+.xdsoft_datetimepicker .xdsoft_label > .xdsoft_select {
+  border: 1px solid #ccc;
+  position: absolute;
+  right: 0;
+  top: 30px;
+  z-index: 101;
+  display: none;
+  background: #fff;
+  max-height: 160px;
+  overflow-y: hidden;
+}
+
+.xdsoft_datetimepicker .xdsoft_label > .xdsoft_select.xdsoft_monthselect {
+  right: -7px;
+}
+
+.xdsoft_datetimepicker .xdsoft_label > .xdsoft_select.xdsoft_yearselect {
+  right: 2px;
+}
+
+.xdsoft_datetimepicker .xdsoft_label > .xdsoft_select > div > .xdsoft_option:hover {
+  color: #fff;
+  background: #ff8000;
+}
+
+.xdsoft_datetimepicker .xdsoft_label > .xdsoft_select > div > .xdsoft_option {
+  padding: 2px 10px 2px 5px;
+  text-decoration: none !important;
+}
+
+.xdsoft_datetimepicker .xdsoft_label > .xdsoft_select > div > .xdsoft_option.xdsoft_current {
+  background: #33aaff;
+  box-shadow: #178fe5 0 1px 3px 0 inset;
+  color: #fff;
+  font-weight: 700;
+}
+
+.xdsoft_datetimepicker .xdsoft_month {
+  width: 100px;
+  text-align: right;
+}
+
+.xdsoft_datetimepicker .xdsoft_calendar {
+  clear: both;
+}
+
+.xdsoft_datetimepicker .xdsoft_year {
+  width: 48px;
+  margin-left: 5px;
+}
+
+.xdsoft_datetimepicker .xdsoft_calendar table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.xdsoft_datetimepicker .xdsoft_calendar td > div {
+  padding-right: 5px;
+}
+
+.xdsoft_datetimepicker .xdsoft_calendar th {
+  height: 25px;
+}
+
+.xdsoft_datetimepicker .xdsoft_calendar td,
+.xdsoft_datetimepicker .xdsoft_calendar th {
+  width: 14.2857142%;
+  font-size: 12px;
+  text-align: center;
+  vertical-align: middle;
+  padding: 0;
+  border-collapse: collapse;
+  cursor: pointer;
+  height: 25px;
+  font-family: "Ubuntu";
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 20px;
+  color: #000000;
+}
+
+.xdsoft_datetimepicker.xdsoft_showweeks .xdsoft_calendar td,
+.xdsoft_datetimepicker.xdsoft_showweeks .xdsoft_calendar th {
+  width: 12.5%;
+}
+
+.xdsoft_datetimepicker .xdsoft_calendar th {
+  font-family: "Ubuntu";
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 20px;
+  text-transform: uppercase;
+  color: #000 !important;
+}
+
+.xdsoft_datetimepicker .xdsoft_calendar td.xdsoft_today {
+  color: #33aaff;
+}
+
+.xdsoft_datetimepicker .xdsoft_calendar td.xdsoft_highlighted_default {
+  background: #ffe9d2;
+  box-shadow: #ffb871 0 1px 4px 0 inset;
+  color: #000;
+}
+
+.xdsoft_datetimepicker .xdsoft_calendar td.xdsoft_highlighted_mint {
+  background: #c1ffc9;
+  box-shadow: #00dd1c 0 1px 4px 0 inset;
+  color: #000;
+}
+
+.xdsoft_datetimepicker .xdsoft_calendar td.xdsoft_default,
+.xdsoft_datetimepicker .xdsoft_calendar td.xdsoft_current,
+.xdsoft_datetimepicker .xdsoft_timepicker .xdsoft_time_box > div > div.xdsoft_current {
+  background: #33aaff;
+  background: linear-gradient(270deg, #8EE901 0%, #4F9C2C 99.06%);
+  border-radius: 100px;
+  color: #fff;
+  font-family: "Ubuntu";
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 20px;
+  width: 30px;
+  height: 30px;
+}
+
+.xdsoft_datetimepicker .xdsoft_calendar td.xdsoft_other_month,
+.xdsoft_datetimepicker .xdsoft_calendar td.xdsoft_disabled,
+.xdsoft_datetimepicker .xdsoft_time_box > div > div.xdsoft_disabled {
+  opacity: 0.5;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+  cursor: default;
+}
+
+.xdsoft_datetimepicker .xdsoft_calendar td.xdsoft_other_month.xdsoft_disabled {
+  opacity: 0.2;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=20)";
+}
+
+.xdsoft_datetimepicker .xdsoft_calendar td:hover,
+.xdsoft_datetimepicker .xdsoft_timepicker .xdsoft_time_box > div > div:hover {
+  color: #fff !important;
+  background: #3aaa2b !important;
+  box-shadow: none !important;
+}
+
+.xdsoft_datetimepicker .xdsoft_calendar td.xdsoft_current.xdsoft_disabled:hover,
+.xdsoft_datetimepicker .xdsoft_timepicker .xdsoft_time_box > div > div.xdsoft_current.xdsoft_disabled:hover {
+  background: #33aaff !important;
+  box-shadow: #178fe5 0 1px 3px 0 inset !important;
+  color: #fff !important;
+}
+
+.xdsoft_datetimepicker .xdsoft_calendar td.xdsoft_disabled:hover,
+.xdsoft_datetimepicker .xdsoft_timepicker .xdsoft_time_box > div > div.xdsoft_disabled:hover {
+  color: inherit !important;
+  background: inherit !important;
+  box-shadow: inherit !important;
+}
+
+.xdsoft_time_box {
+  position: relative;
+}
+
+.xdsoft_scrollbar > .xdsoft_scroller {
+  background: #ccc !important;
+  height: 20px;
+  border-radius: 3px;
+}
+
+.xdsoft_scrollbar {
+  position: absolute;
+  width: 7px;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  cursor: pointer;
+}
+
+.xdsoft_datetimepicker.xdsoft_rtl .xdsoft_scrollbar {
+  left: 0;
+  right: auto;
+}
+
+.xdsoft_scroller_box {
+  position: relative;
+}
+
+.xdsoft_datetimepicker .blue-gradient-button {
+  font-family: "museo-sans", "Book Antiqua", sans-serif;
+  font-size: 12px;
+  font-weight: 300;
+  color: #82878c;
+  height: 28px;
+  position: relative;
+  padding: 4px 17px 4px 33px;
+  border: 1px solid #d7d8da;
+  /* FF3.6+ */
+  /* Chrome,Safari4+ */
+  /* Chrome10+,Safari5.1+ */
+  /* Opera 11.10+ */
+  /* IE10+ */
+  background: linear-gradient(to bottom, #fff 0%, #f4f8fa 73%);
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="#fff", endColorstr="#f4f8fa",GradientType=0 );
+  /* IE6-9 */
+}
+
+.xdsoft_datetimepicker .blue-gradient-button:hover,
+.xdsoft_datetimepicker .blue-gradient-button:focus,
+.xdsoft_datetimepicker .blue-gradient-button:hover span,
+.xdsoft_datetimepicker .blue-gradient-button:focus span {
+  color: #454551;
+  /* FF3.6+ */
+  /* Chrome,Safari4+ */
+  /* Chrome10+,Safari5.1+ */
+  /* Opera 11.10+ */
+  /* IE10+ */
+  background: linear-gradient(to bottom, #f4f8fa 0%, #FFF 73%);
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="#f4f8fa", endColorstr="#FFF",GradientType=0 );
+  /* IE6-9 */
 }
 
 @media (min-width: 991.98px) {
@@ -5528,36 +6124,18 @@ body._lock {
     margin: 0;
   }
 
-  .position-info__breadcrumbs {
-    position: absolute;
-    top: 0;
-    left: 0;
-  }
-
   .position-page__body {
     flex-direction: column;
     position: relative;
-    padding-top: 145px;
+    padding-top: 50px;
   }
 
   .position-page__media {
-    max-width: 50%;
+    flex: 0 0 50%;
   }
 
   .position-page__info {
     padding-left: 0;
-  }
-
-  .position-info__title {
-    position: absolute;
-    left: 0;
-    top: 20px;
-  }
-
-  .position-info__available {
-    position: absolute;
-    left: 0;
-    top: 80px;
   }
 
   .recommend__goods {
@@ -5567,6 +6145,14 @@ body._lock {
 
   .recommend__goods-image {
     margin: 0 auto;
+  }
+
+  .tags-media__body {
+    justify-content: center;
+  }
+
+  .position-info__content {
+    margin-top: 50px;
   }
 
   .search-goods {
@@ -5870,6 +6456,10 @@ body._lock {
     min-width: auto;
   }
 
+  .position-page__media {
+    flex: 0 0 100%;
+  }
+
   .result-cart {
     flex-wrap: wrap;
   }
@@ -5883,8 +6473,8 @@ body._lock {
   }
 
   .goods-cart__items {
-    -ms-grid-columns: 150px (1fr)[2];
-    grid-template-columns: 150px repeat(2, 1fr);
+    -ms-grid-columns: (1fr)[3];
+    grid-template-columns: repeat(3, 1fr);
     -ms-grid-rows: (140px)[2];
     grid-template-rows: repeat(2, 140px);
     border-bottom: 1px solid #EFEFEF;
@@ -6086,7 +6676,12 @@ body._lock {
   }
 
   .category__sort {
-    flex-direction: column;
+    padding: 15px 0 5px;
+  }
+
+  .selected,
+  .option {
+    padding: 12px 20px;
   }
 
   .my-bonus__items {
@@ -6188,8 +6783,8 @@ body._lock {
   }
 }
 
-.webp .popup__close{ background: url(../../img/close-1.webp) 0 0 no-repeat; }
-
 .webp .search-block__close::before{ background: url(../img/close.webp); }
 
 .webp .map-block__item-title::before{ background: url(../img/01.webp); }
+
+.webp .xdsoft_datetimepicker .xdsoft_label i, .webp .xdsoft_datetimepicker .xdsoft_prev, .webp .xdsoft_datetimepicker .xdsoft_next, .webp .xdsoft_datetimepicker .xdsoft_today_button{ background-image: url(data:image/webp;base64,UklGRnwBAABXRUJQVlA4WAoAAAAQAAAAYwAAHQAAQUxQSPQAAAABgCPbtirl4Jo5TMnypkeAQ0TEEG7VnQkyAEJ3dyd199P6/n2P7gayiJgA/BOL5gEhNecJSWqOE2bUHyBWaiHMquFRbJQGQke16B72Q7FQGgidNVobGfNDiaa08NxBknE/lCjK4NqZscsPxU0ZXBuzxvxQXJTBddIx7kddJLhupk+OpXHEh8JZQltYnSZHgX5ye3XLgyKiBFaMaX6WA3jkaXmRnSKyhAUc8K0OKL/iPaxJhaFYKJ0lwhXZCtSSrDFTmIoB1EUQceryqAGo3rjYqLJSGIsBNJsgl2smQW7XNEGuV1KQ+1Xwy1aSlFwHJQW5XwUAVlA4IGIAAADQBQCdASpkAB4APm0oj0ekIqEhPaCADYlpABbZRzi4/mZYhzJa6XwYmQpG2D/MSAtxHwkYvYBgAP7xRH/+PO//jsj//x6RH//4h8//hVa/2k4f/qJ2f//EOgMH7//7f2AAAA==); }
