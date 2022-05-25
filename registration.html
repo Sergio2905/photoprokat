@@ -2,10 +2,10 @@
 <html lang="ru">
 
 <head>
-    <title>Новости компании</title>
+    <title>Регистрация</title>
     <meta charset="UTF-8">
     <meta name="format-detection" content="telephone=no">
-    <link rel="stylesheet" href="css/style.min.css?_v=20220524003734">
+    <link rel="stylesheet" href="css/style.min.css?_v=20220525051023">
     <!-- <meta name="robots" content="noindex, nofollow"> -->
     <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"> -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -283,9 +283,10 @@
 						данные
 					</div>
 					<div class="reg-form__btns">
-						<button type="button" class="reg-form__btn reg-form__btn_continue">Продолжить
-							регистрацию</button>
-						<button type="button" class="reg-form__btn reg-form__btn_finish">Завершить регистрацию</button>
+						<a href="#" class="reg-form__btn reg-form__btn_continue">Продолжить
+							регистрацию</a>
+						<a href="#" class="reg-form__btn reg-form__btn_finish _popup-link regfinish">Завершить
+							регистрацию</a>
 					</div>
 				</form>
 			</div>
@@ -360,13 +361,68 @@
         </div>
     </section>
 </footer>
+			<!--<div class="popup" id="popup">
+    <div class="popup__body">
+        <div class="popup__content">
+            <a href="#header" class="popup__close close-popup">x</a>
+            <div class="popup__title">Modal window #1</div>
+            <div class="popup__text">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore quam officia aut maiores magnam animi
+                iusto vitae, minima dicta provident suscipit eum consectetur porro esse eius aliquid recusandae, nostrum
+                officiis! <br>
+                <a href="#popup_2" class="popup-link">Попап №2</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="popup" id="popup_2">
+    <div class="popup__body">
+        <div class="popup__content">
+            <a href="#header" class="popup__close close-popup">x</a>
+            <div class="popup__title">Modal window #2</div>
+            <div class="popup__text">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore quam officia aut maiores magnam animi
+                iusto vitae, minima dicta provident suscipit eum consectetur porro esse eius aliquid recusandae, nostrum
+                officiis!
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore quam officia aut maiores magnam animi
+                iusto vitae, minima dicta provident suscipit eum consectetur porro esse eius aliquid recusandae, nostrum
+                officiis! <br>
+                <a href="#popup" class="popup-link">Попап №1</a>
+            </div>
+        </div>
+    </div>
+</div>-->
+
+<div class="popup popup_regfinish _active">
+    <div class="popup__content">
+        <div class="popup__body">
+            <article class="login__wrapper">
+                <h2 class="popup__title">Вы уверены, что хотите завершить регистрацию?</h2>
+                <div class="popup__message">
+                    Если вы укажете о себе больше данных, у вас будет возможность арендовать технику со сниженной суммой
+                    залога или без залога вообще.
+                    Если вы все же хотите завершить регистрацию - пожалуйста, дайте согласие на обработку ваших
+                    персональных данных.
+                </div>
+                <div class="popup__checkbox options-checkbox__item checkbox">
+                    Даю согласие на обработку персональных данных
+                    <input type="checkbox" name="follow">
+                </div>
+                <button type="submit" class="popup__btn btn_green">Завершить регистрацию</button>
+                <button type="submit" class="popup__btn btn_white">Отмена</button>
+            </article>
+            <div class="popup__close"><span>+</span></div>
+        </div>
+    </div>
+</div>
+
 		</div>
 
-
 		<!-- Swiper -->
-		<!-- <script src="https://unpkg.com/swiper/swiper-bundle.min.js?_v=20220524003734"></script> -->
-		<script src="js/vendors.min.js?_v=20220524003734"></script>
-		<script src="js/app.min.js?_v=20220524003734"></script>
+		<!-- <script src="https://unpkg.com/swiper/swiper-bundle.min.js?_v=20220525051023"></script> -->
+		<script src="js/vendors.min.js?_v=20220525051023"></script>
+		<script src="js/app.min.js?_v=20220525051023"></script>
 </body>
 
 </html>

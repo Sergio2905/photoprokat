@@ -2,10 +2,10 @@
 <html lang="ru">
 
 <head>
-    <title>Новости компании</title>
+    <title>Корзина</title>
     <meta charset="UTF-8">
     <meta name="format-detection" content="telephone=no">
-    <link rel="stylesheet" href="css/style.min.css?_v=20220524205005">
+    <link rel="stylesheet" href="css/style.min.css?_v=20220525051023">
     <!-- <meta name="robots" content="noindex, nofollow"> -->
     <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"> -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -181,7 +181,9 @@
 				</h1>
 
 				<form action="" class="cart__body">
-					<div class="cart__date"></div>
+					<div class="cart__date">
+						<input class="calendar" type="text" placeholder="calendar">
+					</div>
 					<div class="cart__goods goods-cart">
 						<div class="goods-cart__table">
 							<div class="goods-cart__items">
@@ -231,7 +233,8 @@
 								<div class="goods-cart__item">
 									<div class="goods-cart__header"></div>
 									<div class="goods-cart__block">
-										<button class="goods-cart__delete btn_white" type="button">D</button>
+										<button class="goods-cart__delete btn_white _icon-delete"
+											type="button"></button>
 									</div>
 								</div>
 							</div>
@@ -282,7 +285,8 @@
 								<div class="goods-cart__item">
 									<div class="goods-cart__header"></div>
 									<div class="goods-cart__block">
-										<button class="goods-cart__delete btn_white" type="button">D</button>
+										<button class="goods-cart__delete btn_white _icon-delete"
+											type="button"></button>
 									</div>
 								</div>
 							</div>
@@ -385,9 +389,11 @@
 
 
 		<!-- Swiper -->
-		<!-- <script src="https://unpkg.com/swiper/swiper-bundle.min.js?_v=20220524205005"></script> -->
-		<script src="js/vendors.min.js?_v=20220524205005"></script>
-		<script src="js/app.min.js?_v=20220524205005"></script>
+		<!-- <script src="https://unpkg.com/swiper/swiper-bundle.min.js?_v=20220525051023"></script> -->
+		<script src="js/vendors.min.js?_v=20220525051023"></script>
+		<script src="js/jquery.js?_v=20220525051023"></script>
+		<script src="js/jquery.datetimepicker.full.min.js?_v=20220525051023"></script>
+		<script src="js/app.min.js?_v=20220525051023"></script>
 </body>
 
 </html>
