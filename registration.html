@@ -5,7 +5,7 @@
     <title>Регистрация</title>
     <meta charset="UTF-8">
     <meta name="format-detection" content="telephone=no">
-    <link rel="stylesheet" href="css/style.min.css?_v=20220525112835">
+    <link rel="stylesheet" href="css/style.min.css?_v=20220705130518">
     <!-- <meta name="robots" content="noindex, nofollow"> -->
     <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"> -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -23,14 +23,14 @@
                     <div class="menu-block__menu menu">
                         <div class="menu__body">
                             <button type="button" class="icon-menu">
+                                <!--<span></span>
                                 <span></span>
-                                <span></span>
-                                <span></span>
+                                <span></span>-->
                             </button>
                             <nav class="menu__navigation">
                                 <ul class="menu__list">
                                     <li class="_title-item">
-                                        <a href="#" class="_title-link"><span></span>Каталог</a>
+                                        <a href="#" class="_title-link">Каталог</a>
                                     </li>
                                     <li class="menu__item">
                                         <a href="#" class="menu__link">Камеры</a>
@@ -57,7 +57,7 @@
                                         <a href="#" class="menu__link">Акссесуары</a>
                                     </li>
                                     <li class="_title-item">
-                                        <a href="#" class="_title-link"><span></span>Новинки в прокате</a>
+                                        <a href="#" class="_watch__all">Смотреть все категории</a>
                                     </li>
                                 </ul>
                                 <ul class="menu__list _right-list">
@@ -156,7 +156,13 @@
                             </li>
                             <li class="account-list__item"><a href="#" class="account-list__link">Мои бонусы</a>
                             </li>
-                            <li class="_exit"><a href="#" class="_exit">Выйти</a></li>
+                            <li class="_exit">
+                                <a href="#" class="_exit">Выйти
+                                    <svg>
+                                        <use xlink: href="img/icons/icons.svg#exit"></use>
+                                    </svg>
+                                </a>
+                            </li>
                         </ul>
                     </div>
                 </div>
@@ -185,7 +191,7 @@
 
 				<form action="" class="registration__form reg-form">
 					<div class="reg-form__steps">
-						<div class="reg-form__step reg-form__step-1 active">
+						<div class="reg-form__step reg-form__step-1">
 							<div class="reg-form__block form-personal__block">
 								<div class="reg-form__item form-personal__item_short input-important">
 									<label for="surname">Фамилия</label>
@@ -206,6 +212,7 @@
 								<div class="reg-form__item form-personal__item_short">
 									<label for="birthdate">Дата рождения</label>
 									<input type="text" name="birthdate">
+									<div class="date-cart__icon _icon-calendar"></div>
 								</div>
 								<div class="reg-form__item form-personal__item_short input-important">
 									<label for="e-mail">E-mail</label>
@@ -221,80 +228,26 @@
 								</div>
 							</div>
 						</div>
-						<div class="reg-form__step reg-form__step-2">
-							<h2 class="reg-form__subtitle"><span>Этап 2</span></h2>
-							<div class="reg-form__info">
-								Следующая информация необходима нам для решения о необходимости
-								и размере залога по Вашему заказу. Пожалуйста, заполните её для снижения суммы залога.
-								Если Вы хотите взять технику на условиях 100% залога, нажмите Пропустить
-							</div>
-							<div class="reg-form__block form-personal__block">
-								<div class="reg-form__item form-personal__item_short">
-									<label for="passport">Паспорт (Серия, No)</label>
-									<input type="text" name="passport">
-								</div>
-								<div class="reg-form__item form-personal__item_short">
-									<label for="get-date">Дата выдачи</label>
-									<input type="text" name="get-date">
-								</div>
-								<div class="reg-form__item form-personal__item_short">
-									<label for="address">Адрес прописки</label>
-									<input type="text" name="address">
-								</div>
-								<div class="reg-form__item form-personal__item_short">
-									<label for="address-fact">Адрес проживания, если отличается</label>
-									<input type="text" name="address-fact">
-								</div>
-								<div class="reg-form__item form-personal__item_long">
-									<label for="whom">Кем выдан</label>
-									<input type="text" name="whom">
-								</div>
-							</div>
-						</div>
-						<div class="reg-form__step reg-form__step-3">
-							<h2 class="reg-form__subtitle"><span>Этап 3</span></h2>
-							<div class="reg-form__info">
-								Спасибо за введенную информацию! Пожалуйста, ответьте еще на несколько вопросов для
-								увеличения вероятности положительного решения по залогу.
-							</div>
-							<div class="reg-form__block form-personal__block">
-								<div class="reg-form__item form-personal__item_short">
-									<label for="place">Место работы/учебы</label>
-									<input type="text" name="place">
-								</div>
-								<div class="reg-form__item form-personal__item_short">
-									<label for="spec">Должность/специальность</label>
-									<input type="text" name="spec">
-								</div>
-								<div class="reg-form__item form-personal__item_short">
-									<label for="phone-job">Рабочий телефон</label>
-									<input type="text" name="phone-job">
-								</div>
-								<div class="reg-form__item form-personal__item_short">
-									<label for="where">Откуда вы о нас узнали</label>
-									<input type="text" name="where">
-								</div>
-								<div class="reg-form__item form-personal__item_long">
-									<label for="who">Кто может Вас порекомендовать?</label>
-									<input type="text" name="who">
-								</div>
-							</div>
-						</div>
 					</div>
-					<div class="reg-form__warning">
-						Для снижения суммы залога или возможности арендовать технику без залога укажите ваши паспортные
-						данные
+					<div class="reg-form__warning-content">
+						<div class="reg-form__warning">
+							Для снижения суммы залога или возможности арендовать технику без залога укажите ваши
+							паспортные
+							данные
+						</div>
+						<div class="reg-form__warning_green">Внимание</div>
 					</div>
 					<div class="reg-form__btns">
-						<a href="#" class="reg-form__btn reg-form__btn_continue">Продолжить
+						<a href="#" class="reg-form__btn reg-form__btn_continue btn_green">Продолжить
 							регистрацию</a>
-						<a href="#" class="reg-form__btn reg-form__btn_finish _popup-link regfinish">Завершить
+						<a href="#" class="reg-form__btn reg-form__btn_finish _popup-link regfinish btn_white">Завершить
 							регистрацию</a>
 					</div>
 				</form>
 			</div>
 
-			<footer class="footer">
+		</div>
+		<footer class="footer">
     <section class="footer__subscribe subscribe">
         <div class="subscribe__container container">
             <div class="subscribe__body">
@@ -327,7 +280,9 @@
                     <div class="other-block__body">
                         <div class="other-block__column">
                             <div class="other-block__text">
-                                <picture><source srcset="./img/logo.webp" type="image/webp"><img src="./img/logo.png" alt="image"></picture>
+                                <a href="#" class="other-block__link">
+                                    <picture><source srcset="./img/logo.webp" type="image/webp"><img src="./img/logo.png" alt="image"></picture>
+                                </a>
                                 <p>Самый удобный в Москве сервис <br> аренды фото, видео и кинотехники</p>
                             </div>
                         </div>
@@ -369,7 +324,11 @@
         </div>
     </section>
 </footer>
-			<!--<div class="popup" id="popup">
+
+<button type="button" class="totop__btn">
+    <span class="_icon-arrow-left"></span>
+</button>
+		<!--<div class="popup" id="popup">
     <div class="popup__body">
         <div class="popup__content">
             <a href="#header" class="popup__close close-popup">x</a>
@@ -402,7 +361,7 @@
     </div>
 </div>-->
 
-<div class="popup popup_regfinish _active">
+<div class="popup popup_regfinish">
     <div class="popup__content">
         <div class="popup__body">
             <article class="login__wrapper">
@@ -425,12 +384,36 @@
     </div>
 </div>
 
-		</div>
-
-		<!-- Swiper -->
-		<!-- <script src="https://unpkg.com/swiper/swiper-bundle.min.js?_v=20220525112835"></script> -->
-		<script src="js/vendors.min.js?_v=20220525112835"></script>
-		<script src="js/app.min.js?_v=20220525112835"></script>
+<div class="popup popup__callback">
+    <div class="popup__content">
+        <div class="popup__body">
+            <article class="login__wrapper">
+                <h2 class="popup__title">Укажите свои данные, чтобы мы могли связаться с Вами:</h2>
+                <div class="form-personal__item_short">
+                    <label for="name">Имя</label>
+                    <input type="text" name="name">
+                </div>
+                <div class="form-personal__item_short">
+                    <label for="email">Email</label>
+                    <input type="email" name="email">
+                </div>
+                <div class="form-personal__item_short">
+                    <label for="phone">Телефон</label>
+                    <input type="tel" name="phone">
+                </div>
+                <button type="submit" class="popup__btn btn_green">Отправить</button>
+            </article>
+            <div class="popup__close"><span>+</span></div>
+        </div>
+    </div>
+</div>
+	</div>
+	<!-- Swiper -->
+	<!-- <script src="https://unpkg.com/swiper/swiper-bundle.min.js?_v=20220705130518"></script> -->
+	<script src="js/vendors.min.js?_v=20220705130518"></script>
+	<script src="js/jquery.js?_v=20220705130518"></script>
+	<script src="js/jquery.datetimepicker.full.min.js?_v=20220705130518"></script>
+	<script src="js/app.min.js?_v=20220705130518"></script>
 </body>
 
 </html>

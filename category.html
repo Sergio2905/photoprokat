@@ -5,7 +5,7 @@
     <title>Категории товаров</title>
     <meta charset="UTF-8">
     <meta name="format-detection" content="telephone=no">
-    <link rel="stylesheet" href="css/style.min.css?_v=20220525112835">
+    <link rel="stylesheet" href="css/style.min.css?_v=20220705130518">
     <!-- <meta name="robots" content="noindex, nofollow"> -->
     <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"> -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -23,14 +23,14 @@
                     <div class="menu-block__menu menu">
                         <div class="menu__body">
                             <button type="button" class="icon-menu">
+                                <!--<span></span>
                                 <span></span>
-                                <span></span>
-                                <span></span>
+                                <span></span>-->
                             </button>
                             <nav class="menu__navigation">
                                 <ul class="menu__list">
                                     <li class="_title-item">
-                                        <a href="#" class="_title-link"><span></span>Каталог</a>
+                                        <a href="#" class="_title-link">Каталог</a>
                                     </li>
                                     <li class="menu__item">
                                         <a href="#" class="menu__link">Камеры</a>
@@ -57,7 +57,7 @@
                                         <a href="#" class="menu__link">Акссесуары</a>
                                     </li>
                                     <li class="_title-item">
-                                        <a href="#" class="_title-link"><span></span>Новинки в прокате</a>
+                                        <a href="#" class="_watch__all">Смотреть все категории</a>
                                     </li>
                                 </ul>
                                 <ul class="menu__list _right-list">
@@ -156,7 +156,13 @@
                             </li>
                             <li class="account-list__item"><a href="#" class="account-list__link">Мои бонусы</a>
                             </li>
-                            <li class="_exit"><a href="#" class="_exit">Выйти</a></li>
+                            <li class="_exit">
+                                <a href="#" class="_exit">Выйти
+                                    <svg>
+                                        <use xlink: href="img/icons/icons.svg#exit"></use>
+                                    </svg>
+                                </a>
+                            </li>
                         </ul>
                     </div>
                 </div>
@@ -268,165 +274,251 @@
 								</div>
 							</div>
 						</div>
+						<div class="brands__slide swiper-slide">
+							<div class="brands__item">
+								<div class="brands__check">
+									<div class="brands__checkbox checkbox">
+										<div class="brands__logo">
+											<picture><source srcset="img/category/brands/disney.webp" type="image/webp"><img src="img/category/brands/disney.png" alt=""></picture>
+										</div>
+
+										<input type="checkbox" name="disney">
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="brands__slide swiper-slide">
+							<div class="brands__item">
+								<div class="brands__check">
+									<div class="brands__checkbox checkbox">
+										<div class="brands__logo">
+											<picture><source srcset="img/category/brands/cnn.webp" type="image/webp"><img src="img/category/brands/cnn.png" alt=""></picture>
+										</div>
+
+										<input type="checkbox" name="cnn">
+									</div>
+								</div>
+							</div>
+						</div>
 					</div>
+					<div class="swiper-button-prev _icon-arrow-left"></div>
+					<div class="swiper-button-next _icon-arrow-right"></div>
 				</div>
 				<div class="category__find-items">
 					Найдено<span class="category__find-items-count"> 21 </span><span>товаров</span>
 				</div>
 				<div class="category__sort">
-					<div class="category__sort-popular select-box">
-						<div class="options-container">
-							<div class="option">
-								<input type="radio" class="radio" id="week" name="popularity">
-								<label for="week">Неделя</label>
-							</div>
-							<div class="option">
-								<input type="radio" class="radio" id="month" name="popularity">
-								<label for="month">Месяц</label>
-							</div>
-							<div class="option">
-								<input type="radio" class="radio" id="weekend" name="popularity">
-								<label for="weekend">Выходной</label>
-							</div>
-							<div class="option">
-								<input type="radio" class="radio" id="work" name="popularity">
-								<label for="work">Будний</label>
+					<div class="category__sort_left">
+						<a href="#" class="category__show-hide-filter">
+							Фильтр
+						</a>
+						<div class="category__sort-popular select-box">
+							<div class="selected">
+								По популярности
 							</div>
 						</div>
-						<div class="selected">
-							По популярности
+						<div class="category__sort-price select-box">
+							<div class="options-container">
+								<div class="option">
+									<div class="options-radio__item">
+										<input type="radio" class="radio" id="day" name="sort">
+										<label for="day">Сутки</label>
+									</div>
+								</div>
+								<div class="option">
+									<div class="options-radio__item">
+										<input type="radio" class="radio" id="week" name="sort">
+										<label for="week">Неделю</label>
+									</div>
+								</div>
+								<div class="option">
+									<div class="options-radio__item">
+										<input type="radio" class="radio" id="month" name="sort">
+										<label for="month">Месяц</label>
+									</div>
+								</div>
+							</div>
+							<div class="selected active">
+								По цене за <span></span>
+							</div>
+						</div>
+						<div class="category__sort-hidden select-box">
+							<div class="options-container">
+								<div class="option">
+									<div class="options-radio__item">
+										<input type="radio" class="radio" id="popular" name="sort">
+										<label for="popular">По популярности</label>
+									</div>
+								</div>
+								<div class="option">
+									<div class="options-radio__item">
+										<input type="radio" class="radio" id="day" name="sort">
+										<label for="day">По цене за Сутки</label>
+									</div>
+								</div>
+								<div class="option">
+									<div class="options-radio__item">
+										<input type="radio" class="radio" id="week" name="sort">
+										<label for="week">По цене за Неделю</label>
+									</div>
+								</div>
+								<div class="option">
+									<div class="options-radio__item">
+										<input type="radio" class="radio" id="month" name="sort">
+										<label for="month">По цене за месяц</label>
+									</div>
+								</div>
+							</div>
+							<div class="selected">
+								<span>Сортировка</span>
+							</div>
 						</div>
 					</div>
-					<div class="category__sort-price select-box">
-						<div class="options-container">
-							<div class="option">
-								<input type="radio" class="radio" id="week" name="price">
-								<label for="week">Неделя</label>
-							</div>
-							<div class="option">
-								<input type="radio" class="radio" id="month" name="price">
-								<label for="month">Месяц</label>
-							</div>
-							<div class="option">
-								<input type="radio" class="radio" id="weekend" name="price">
-								<label for="weekend">Выходной</label>
-							</div>
-							<div class="option">
-								<input type="radio" class="radio" id="work" name="price">
-								<label for="work">Будний</label>
-							</div>
-						</div>
-						<div class="selected">
-							По цене
-						</div>
+					<div class="category__sort_right">
+						<button type="button" class="category__sort_top"></button>
+						<button type="button" class="category__sort_bottom active"></button>
 					</div>
 				</div>
-				<a href="#" class="category__show-hide-filter">
-					Фильтр
-				</a>
+
 				<div class="category__goods goods">
 					<div class="goods__catalog">
-						<div class="goods__item">
-							<div class="goods__block">
-								<div class="goods__image">
-									<picture><source srcset="img/category/goods/img1.webp" type="image/webp"><img src="img/category/goods/img1.png" alt=""></picture>
+						<div class="search-goods__item">
+							<div class="search-goods__image-block" data-first="title, after" data-last="title, before">
+								<div class="search-goods__image">
+									<a href="#" class="">
+										<picture><source srcset="img/category/photo4.webp" type="image/webp"><img src="img/category/photo4.jpg" alt=""></picture>
+									</a>
 								</div>
-								<div class="goods__functions">
+								<div class="search-goods__functions goods__functions">
 									<a href="#" class="goods__link _icon-compare"></a>
 									<a href="#" class="goods__link _icon-star"></a>
 								</div>
 							</div>
-							<div class="goods__info">
-								<h4 class="goods__title">PowerShot SX620 HS</h4>
-								<div class="goods__brand">Canon</div>
-								<div class="goods__price">От <span>1850</span> Р</div>
+							<h4 class="search-goods__title" data-move="title, 480">
+								<a href="#">PowerShot SX620 HS</a>
+							</h4>
+							<div class="search-goods__brand">
+								Canon
 							</div>
-							<button class="goods__btn btn_white">Подробнее</button>
+							<div class="search-goods__options">
+								<button class="search-goods__option" type="button">
+									<span>630 Р</span>Сутки
+								</button>
+								<button class="search-goods__option" type="button">
+									<span>4 380 Р</span>Неделя
+								</button>
+								<button class="search-goods__option" type="button">
+									<span>12 250 Р</span>Месяц
+								</button>
+							</div>
+							<div class="search-goods__btns">
+								<button class="search-goods__btn btn_white" type="button">Подробнее</button>
+								<button class="search-goods__btn btn_green" type="button">В корзину</button>
+							</div>
 						</div>
-						<div class="goods__item">
-							<div class="goods__block">
-								<div class="goods__image">
-									<picture><source srcset="img/category/goods/img2.webp" type="image/webp"><img src="img/category/goods/img2.png" alt=""></picture>
+						<div class="search-goods__item">
+							<div class="search-goods__image-block" data-first="title2, after"
+								data-last="title2, before">
+								<div class="search-goods__image">
+									<a href="#">
+										<picture><source srcset="img/category/photo3.webp" type="image/webp"><img src="img/category/photo3.jpg" alt=""></picture>
+									</a>
 								</div>
-								<div class="goods__functions">
+								<div class="search-goods__functions goods__functions">
 									<a href="#" class="goods__link _icon-compare"></a>
 									<a href="#" class="goods__link _icon-star"></a>
 								</div>
 							</div>
-							<div class="goods__info">
-								<h4 class="goods__title">Alpha ILCE-6000 Kit</h4>
-								<div class="goods__brand">Sony</div>
-								<div class="goods__price">От <span>2400</span> Р</div>
+							<h4 class="search-goods__title" data-move="title2, 480">
+								<a href="#">PowerShot SX620 HS</a>
+							</h4>
+							<div class="search-goods__brand">
+								Canon
 							</div>
-							<button class="goods__btn btn_white">Подробнее</button>
+							<div class="search-goods__options">
+								<button class="search-goods__option" type="button">
+									<span>630 Р</span>Сутки
+								</button>
+								<button class="search-goods__option" type="button">
+									<span>4 380 Р</span>Неделя
+								</button>
+								<button class="search-goods__option" type="button">
+									<span>12 250 Р</span>Месяц
+								</button>
+							</div>
+							<div class="search-goods__btns">
+								<button class="search-goods__btn btn_white" type="button">Подробнее</button>
+								<button class="search-goods__btn btn_green" type="button">В корзину</button>
+							</div>
 						</div>
-						<div class="goods__item">
-							<div class="goods__block">
-								<div class="goods__image">
-									<picture><source srcset="img/category/goods/img3.webp" type="image/webp"><img src="img/category/goods/img3.png" alt=""></picture>
+						<div class="search-goods__item">
+							<div class="search-goods__image-block" data-first="title3, after"
+								data-last="title3, before">
+								<div class="search-goods__image">
+									<a href="#">
+										<picture><source srcset="img/category/photo2.webp" type="image/webp"><img src="img/category/photo2.jpg" alt=""></picture>
+									</a>
 								</div>
-								<div class="goods__functions">
+								<div class="search-goods__functions goods__functions">
 									<a href="#" class="goods__link _icon-compare"></a>
 									<a href="#" class="goods__link _icon-star"></a>
 								</div>
 							</div>
-							<div class="goods__info">
-								<h4 class="goods__title">X-T30 Kit</h4>
-								<div class="goods__brand">Fujifilm</div>
-								<div class="goods__price">От <span>4300</span> Р</div>
+							<h4 class="search-goods__title" data-move="title3, 480">
+								<a href="#">PowerShot SX620 HS</a>
+							</h4>
+							<div class="search-goods__brand">
+								Canon
 							</div>
-							<button class="goods__btn btn_white">Подробнее</button>
+							<div class="search-goods__options">
+								<button class="search-goods__option" type="button">
+									<span>630 Р</span>Сутки
+								</button>
+								<button class="search-goods__option" type="button">
+									<span>4 380 Р</span>Неделя
+								</button>
+								<button class="search-goods__option" type="button">
+									<span>12 250 Р</span>Месяц
+								</button>
+							</div>
+							<div class="search-goods__btns">
+								<button class="search-goods__btn btn_white" type="button">Подробнее</button>
+								<button class="search-goods__btn btn_green" type="button">В корзину</button>
+							</div>
 						</div>
-						<div class="goods__item">
-							<div class="goods__block">
-								<div class="goods__image">
-									<picture><source srcset="img/category/goods/img4.webp" type="image/webp"><img src="img/category/goods/img4.png" alt=""></picture>
+						<div class="search-goods__item">
+							<div class="search-goods__image-block" data-first="title4, after"
+								data-last="title4, before">
+								<div class="search-goods__image">
+									<a href="#">
+										<picture><source srcset="img/category/photo1.webp" type="image/webp"><img src="img/category/photo1.jpg" alt=""></picture>
+									</a>
 								</div>
-								<div class="goods__functions">
+								<div class="search-goods__functions goods__functions">
 									<a href="#" class="goods__link _icon-compare"></a>
 									<a href="#" class="goods__link _icon-star"></a>
 								</div>
 							</div>
-							<div class="goods__info">
-								<h4 class="goods__title">EOS 4000D Kit</h4>
-								<div class="goods__brand">Canon</div>
-								<div class="goods__price">От <span>3150</span> Р</div>
+							<h4 class="search-goods__title" data-move="title4, 480"><a href="#">PowerShot SX620 HS</a>
+							</h4>
+							<div class="search-goods__brand">
+								Canon
 							</div>
-							<button class="goods__btn btn_white">Подробнее</button>
-						</div>
-						<div class="goods__item">
-							<div class="goods__block">
-								<div class="goods__image">
-									<picture><source srcset="img/category/goods/img5.webp" type="image/webp"><img src="img/category/goods/img5.png" alt=""></picture>
-								</div>
-								<div class="goods__functions">
-									<a href="#" class="goods__link _icon-compare"></a>
-									<a href="#" class="goods__link _icon-star"></a>
-								</div>
+							<div class="search-goods__options">
+								<button class="search-goods__option" type="button">
+									<span>630 Р</span>Сутки
+								</button>
+								<button class="search-goods__option" type="button">
+									<span>4 380 Р</span>Неделя
+								</button>
+								<button class="search-goods__option" type="button">
+									<span>12 250 Р</span>Месяц
+								</button>
 							</div>
-							<div class="goods__info">
-								<h4 class="goods__title">PowerShot SX620 HS</h4>
-								<div class="goods__brand">Canon</div>
-								<div class="goods__price">От <span>1850</span> Р</div>
+							<div class="search-goods__btns">
+								<button class="search-goods__btn btn_white" type="button">Подробнее</button>
+								<button class="search-goods__btn btn_green" type="button">В корзину</button>
 							</div>
-							<button class="goods__btn btn_white">Подробнее</button>
-						</div>
-						<div class="goods__item">
-							<div class="goods__block">
-								<div class="goods__image">
-									<picture><source srcset="img/category/goods/img6.webp" type="image/webp"><img src="img/category/goods/img6.png" alt=""></picture>
-								</div>
-								<div class="goods__functions">
-									<a href="#" class="goods__link _icon-compare"></a>
-									<a href="#" class="goods__link _icon-star"></a>
-								</div>
-							</div>
-							<div class="goods__info">
-								<h4 class="goods__title">Alpha ILCE-6000 Kit</h4>
-								<div class="goods__brand">Sony</div>
-								<div class="goods__price">От <span>2400</span> Р</div>
-							</div>
-							<button class="goods__btn btn_white">Подробнее</button>
 						</div>
 					</div>
 					<div class="goods__filter filter">
@@ -546,7 +638,9 @@
                     <div class="other-block__body">
                         <div class="other-block__column">
                             <div class="other-block__text">
-                                <picture><source srcset="./img/logo.webp" type="image/webp"><img src="./img/logo.png" alt="image"></picture>
+                                <a href="#" class="other-block__link">
+                                    <picture><source srcset="./img/logo.webp" type="image/webp"><img src="./img/logo.png" alt="image"></picture>
+                                </a>
                                 <p>Самый удобный в Москве сервис <br> аренды фото, видео и кинотехники</p>
                             </div>
                         </div>
@@ -588,13 +682,98 @@
         </div>
     </section>
 </footer>
+
+<button type="button" class="totop__btn">
+    <span class="_icon-arrow-left"></span>
+</button>
+	<!--<div class="popup" id="popup">
+    <div class="popup__body">
+        <div class="popup__content">
+            <a href="#header" class="popup__close close-popup">x</a>
+            <div class="popup__title">Modal window #1</div>
+            <div class="popup__text">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore quam officia aut maiores magnam animi
+                iusto vitae, minima dicta provident suscipit eum consectetur porro esse eius aliquid recusandae, nostrum
+                officiis! <br>
+                <a href="#popup_2" class="popup-link">Попап №2</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="popup" id="popup_2">
+    <div class="popup__body">
+        <div class="popup__content">
+            <a href="#header" class="popup__close close-popup">x</a>
+            <div class="popup__title">Modal window #2</div>
+            <div class="popup__text">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore quam officia aut maiores magnam animi
+                iusto vitae, minima dicta provident suscipit eum consectetur porro esse eius aliquid recusandae, nostrum
+                officiis!
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore quam officia aut maiores magnam animi
+                iusto vitae, minima dicta provident suscipit eum consectetur porro esse eius aliquid recusandae, nostrum
+                officiis! <br>
+                <a href="#popup" class="popup-link">Попап №1</a>
+            </div>
+        </div>
+    </div>
+</div>-->
+
+<div class="popup popup_regfinish">
+    <div class="popup__content">
+        <div class="popup__body">
+            <article class="login__wrapper">
+                <h2 class="popup__title">Вы уверены, что хотите завершить регистрацию?</h2>
+                <div class="popup__message">
+                    Если вы укажете о себе больше данных, у вас будет возможность арендовать технику со сниженной суммой
+                    залога или без залога вообще.
+                    Если вы все же хотите завершить регистрацию - пожалуйста, дайте согласие на обработку ваших
+                    персональных данных.
+                </div>
+                <div class="popup__checkbox options-checkbox__item checkbox">
+                    Даю согласие на обработку персональных данных
+                    <input type="checkbox" name="follow">
+                </div>
+                <button type="submit" class="popup__btn btn_green">Завершить регистрацию</button>
+                <button type="submit" class="popup__btn btn_white">Отмена</button>
+            </article>
+            <div class="popup__close"><span>+</span></div>
+        </div>
+    </div>
+</div>
+
+<div class="popup popup__callback">
+    <div class="popup__content">
+        <div class="popup__body">
+            <article class="login__wrapper">
+                <h2 class="popup__title">Укажите свои данные, чтобы мы могли связаться с Вами:</h2>
+                <div class="form-personal__item_short">
+                    <label for="name">Имя</label>
+                    <input type="text" name="name">
+                </div>
+                <div class="form-personal__item_short">
+                    <label for="email">Email</label>
+                    <input type="email" name="email">
+                </div>
+                <div class="form-personal__item_short">
+                    <label for="phone">Телефон</label>
+                    <input type="tel" name="phone">
+                </div>
+                <button type="submit" class="popup__btn btn_green">Отправить</button>
+            </article>
+            <div class="popup__close"><span>+</span></div>
+        </div>
+    </div>
+</div>
 	</div>
 
 
 	<!-- Swiper -->
-	<!-- <script src="https://unpkg.com/swiper/swiper-bundle.min.js?_v=20220525112835"></script> -->
-	<script src="js/vendors.min.js?_v=20220525112835"></script>
-	<script src="js/app.min.js?_v=20220525112835"></script>
+	<!-- <script src="https://unpkg.com/swiper/swiper-bundle.min.js?_v=20220705130518"></script> -->
+	<script src="js/vendors.min.js?_v=20220705130518"></script>
+	<script src="js/jquery.js?_v=20220705130518"></script>
+	<script src="js/jquery.datetimepicker.full.min.js?_v=20220705130518"></script>
+	<script src="js/app.min.js?_v=20220705130518"></script>
 </body>
 
 </html>

@@ -5,7 +5,7 @@
     <title>Главная</title>
     <meta charset="UTF-8">
     <meta name="format-detection" content="telephone=no">
-    <link rel="stylesheet" href="css/style.min.css?_v=20220525112835">
+    <link rel="stylesheet" href="css/style.min.css?_v=20220705130518">
     <!-- <meta name="robots" content="noindex, nofollow"> -->
     <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"> -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -23,14 +23,14 @@
                     <div class="menu-block__menu menu">
                         <div class="menu__body">
                             <button type="button" class="icon-menu">
+                                <!--<span></span>
                                 <span></span>
-                                <span></span>
-                                <span></span>
+                                <span></span>-->
                             </button>
                             <nav class="menu__navigation">
                                 <ul class="menu__list">
                                     <li class="_title-item">
-                                        <a href="#" class="_title-link"><span></span>Каталог</a>
+                                        <a href="#" class="_title-link">Каталог</a>
                                     </li>
                                     <li class="menu__item">
                                         <a href="#" class="menu__link">Камеры</a>
@@ -57,7 +57,7 @@
                                         <a href="#" class="menu__link">Акссесуары</a>
                                     </li>
                                     <li class="_title-item">
-                                        <a href="#" class="_title-link"><span></span>Новинки в прокате</a>
+                                        <a href="#" class="_watch__all">Смотреть все категории</a>
                                     </li>
                                 </ul>
                                 <ul class="menu__list _right-list">
@@ -156,7 +156,13 @@
                             </li>
                             <li class="account-list__item"><a href="#" class="account-list__link">Мои бонусы</a>
                             </li>
-                            <li class="_exit"><a href="#" class="_exit">Выйти</a></li>
+                            <li class="_exit">
+                                <a href="#" class="_exit">Выйти
+                                    <svg>
+                                        <use xlink: href="img/icons/icons.svg#exit"></use>
+                                    </svg>
+                                </a>
+                            </li>
                         </ul>
                     </div>
                 </div>
@@ -173,23 +179,45 @@
 </header>
 		<main class="page">
 			<section class="page__main main-block">
-				<div class="main-block__container container">
-					<div class="main-block__body">
-						<div class="main-block__body-wrapper">
-							<div class="main-block__item-1"><span>Аренда</span>&nbsp; фото</div>
-							<div class="main-block__item-2">и видео</div>
-							<div class="main-block__item-3">оборудования</div>
-							<span class="main-block__span-test"></span>
+				<div class="main-block__slider _swiper">
+					<div class="main-block__slide">
+						<div class="main-block__slide_info">
+							<h2 class="main-block__slide_title">
+								Аренда фото и видеооборудования
+							</h2>
+							<div class="main-block__slide_text">
+								Умный агрегатор предложений фото и видеопрокатов Москвы
+							</div>
+						</div>
+						<div class="main-block__slide_image">
+							<picture><source srcset="img/1.webp" type="image/webp"><img src="img/1.jpg" alt=""></picture>
 						</div>
 					</div>
-				</div>
-				<div class="main-block__image _ibg">
-					<picture><source srcset="./img/background.webp" type="image/webp"><img src="./img/background.jpg" alt="background"></picture>
+					<div class="main-block__slide">
+						<div class="main-block__slide_image">
+							<picture><source srcset="img/2.webp" type="image/webp"><img src="img/2.jpg" alt=""></picture>
+						</div>
+					</div>
+					<div class="main-block__slide">
+						<div class="main-block__container container">
+							<div class="main-block__body">
+								<div class="main-block__body-wrapper">
+									<div class="main-block__item-1"><span>Аренда</span>&nbsp; фото</div>
+									<div class="main-block__item-2">и видео</div>
+									<div class="main-block__item-3">оборудования</div>
+									<span class="main-block__span-test"></span>
+								</div>
+							</div>
+						</div>
+						<div class="main-block__image">
+							<picture><source srcset="./img/background.webp" type="image/webp"><img src="./img/background.jpg" alt="background"></picture>
+						</div>
+					</div>
 				</div>
 			</section>
 			<section class="page__about about-block">
 				<div class="about-block__container container">
-					<div class="about-block__body">
+					<div class="about-block__body _swiper">
 						<div class="about-block__item about-item">
 							<div class="about-item__body">
 								<picture><source srcset="./img/aboutUs/01.webp" type="image/webp"><img class="about-item__image" src="./img/aboutUs/01.png" alt="image"></picture>
@@ -242,12 +270,8 @@
 									<div class="slider-popular__content">
 										<div class="slider-popular__options">
 											<div class="slider-popular__option">
-												<h3 class="slider-popular__option-title">630 ₽</h3>
-												<p class="slider-popular__option-text">Будний</p>
-											</div>
-											<div class="slider-popular__option">
 												<h3 class="slider-popular__option-title">750 ₽</h3>
-												<p class="slider-popular__option-text">Выходной</p>
+												<p class="slider-popular__option-text">День</p>
 											</div>
 											<div class="slider-popular__option">
 												<h3 class="slider-popular__option-title">4 380 ₽</h3>
@@ -278,12 +302,8 @@
 									<div class="slider-popular__content">
 										<div class="slider-popular__options">
 											<div class="slider-popular__option">
-												<h3 class="slider-popular__option-title">630 ₽</h3>
-												<p class="slider-popular__option-text">Будний</p>
-											</div>
-											<div class="slider-popular__option">
 												<h3 class="slider-popular__option-title">750 ₽</h3>
-												<p class="slider-popular__option-text">Выходной</p>
+												<p class="slider-popular__option-text">День</p>
 											</div>
 											<div class="slider-popular__option">
 												<h3 class="slider-popular__option-title">4 380 ₽</h3>
@@ -314,12 +334,8 @@
 									<div class="slider-popular__content">
 										<div class="slider-popular__options">
 											<div class="slider-popular__option">
-												<h3 class="slider-popular__option-title">630 ₽</h3>
-												<p class="slider-popular__option-text">Будний</p>
-											</div>
-											<div class="slider-popular__option">
 												<h3 class="slider-popular__option-title">750 ₽</h3>
-												<p class="slider-popular__option-text">Выходной</p>
+												<p class="slider-popular__option-text">День</p>
 											</div>
 											<div class="slider-popular__option">
 												<h3 class="slider-popular__option-title">4 380 ₽</h3>
@@ -350,12 +366,8 @@
 									<div class="slider-popular__content">
 										<div class="slider-popular__options">
 											<div class="slider-popular__option">
-												<h3 class="slider-popular__option-title">630 ₽</h3>
-												<p class="slider-popular__option-text">Будний</p>
-											</div>
-											<div class="slider-popular__option">
 												<h3 class="slider-popular__option-title">750 ₽</h3>
-												<p class="slider-popular__option-text">Выходной</p>
+												<p class="slider-popular__option-text">День</p>
 											</div>
 											<div class="slider-popular__option">
 												<h3 class="slider-popular__option-title">4 380 ₽</h3>
@@ -386,12 +398,8 @@
 									<div class="slider-popular__content">
 										<div class="slider-popular__options">
 											<div class="slider-popular__option">
-												<h3 class="slider-popular__option-title">630 ₽</h3>
-												<p class="slider-popular__option-text">Будний</p>
-											</div>
-											<div class="slider-popular__option">
 												<h3 class="slider-popular__option-title">750 ₽</h3>
-												<p class="slider-popular__option-text">Выходной</p>
+												<p class="slider-popular__option-text">День</p>
 											</div>
 											<div class="slider-popular__option">
 												<h3 class="slider-popular__option-title">4 380 ₽</h3>
@@ -422,12 +430,8 @@
 									<div class="slider-popular__content">
 										<div class="slider-popular__options">
 											<div class="slider-popular__option">
-												<h3 class="slider-popular__option-title">630 ₽</h3>
-												<p class="slider-popular__option-text">Будний</p>
-											</div>
-											<div class="slider-popular__option">
 												<h3 class="slider-popular__option-title">750 ₽</h3>
-												<p class="slider-popular__option-text">Выходной</p>
+												<p class="slider-popular__option-text">День</p>
 											</div>
 											<div class="slider-popular__option">
 												<h3 class="slider-popular__option-title">4 380 ₽</h3>
@@ -470,11 +474,16 @@
 						<div class="search-block__form">
 							<button class="search-block__btn-green">перейти в каталог</button>
 							<button class="search-block__btn-white">приступить к поиску</button>
+							<form action="#" class="search-block__hidden">
+								<input type="text" placeholder="Поиск">
+								<button class="search-block__btn_search _icon-search"></button>
+								<button class="search-block__btn_close popup__close"><span>+</span></button>
+							</form>
 						</div>
 					</div>
 					<div class="search-block__gallery gallery">
 						<div class="gallery__body">
-							<div class="gallery__items">
+							<div class="gallery__items _swiper">
 								<div class="gallery__item _ibg">
 									<picture><source srcset="./img/gallery-search/01.webp" type="image/webp"><img src="./img/gallery-search/01.jpg" alt="image"></picture>
 									<div class="gallery__info-first">
@@ -541,23 +550,40 @@
 						<h2 class="together-block__title _title">Зарабатывайте вместе с нами</h2>
 						<p class="together-block__sub-title">Сдавайте свою технику через наш сервис, разместив её в
 							каталоге, и получайте стабильную прибыль.</p>
-						<div class="together-block__items items-together">
-							<div class="items-together__item">
-								<div class="items-together__text">Доступный способ инвестировать</div>
-								<picture><source srcset="./img/equipment/01.webp" type="image/webp"><img src="./img/equipment/01.png" alt="image" class="items-together__image"></picture>
+						<div class="together-block__items items-together _swiper">
+							<div class="items-together__item-wrap">
+								<div class="items-together__item">
+									<div class="items-together__text">Доступный способ инвестировать</div>
+									<svg>
+										<use xlink: href="img/icons/icons.svg#diamond"></use>
+									</svg>
+								</div>
 							</div>
-							<div class="items-together__item">
-								<div class="items-together__text">Постоянный стабильный доход</div>
-								<picture><source srcset="./img/equipment/02.webp" type="image/webp"><img src="./img/equipment/02.png" alt="image" class="items-together__image"></picture>
+							<div class="items-together__item-wrap">
+								<div class="items-together__item">
+									<div class="items-together__text">Постоянный стабильный доход</div>
+									<svg>
+										<use xlink: href="img/icons/icons.svg#calendar2"></use>
+									</svg>
+								</div>
 							</div>
-							<div class="items-together__item">
-								<div class="items-together__text">Гарантии сохранности техники</div>
-								<picture><source srcset="./img/equipment/03.webp" type="image/webp"><img src="./img/equipment/03.png" alt="image" class="items-together__image"></picture>
+							<div class="items-together__item-wrap">
+								<div class="items-together__item">
+									<div class="items-together__text">Гарантии сохранности техники</div>
+									<svg>
+										<use xlink: href="img/icons/icons.svg#umbrella"></use>
+									</svg>
+								</div>
 							</div>
-							<div class="items-together__item">
-								<div class="items-together__text">Прозрачные выплаты</div>
-								<picture><source srcset="./img/equipment/04.webp" type="image/webp"><img src="./img/equipment/04.png" alt="image" class=" _img-last"></picture>
+							<div class="items-together__item-wrap">
+								<div class="items-together__item">
+									<div class="items-together__text">Прозрачные выплаты</div>
+									<svg>
+										<use xlink: href="img/icons/icons.svg#view"></use>
+									</svg>
+								</div>
 							</div>
+
 						</div>
 						<button class="together-block__btn">Предложить свою технику</button>
 					</div>
@@ -567,7 +593,7 @@
 				<div class="news-block__container container">
 					<div class="news-block__body">
 						<h2 class="news-block__title _title">новости компании</h2>
-						<div class="news-block__row-items">
+						<div class="news-block__row-items _swiper">
 							<div class="news-block__column-item news-column">
 								<div class="news-column__body">
 									<a href="#" class="news-column__image _ibg">
@@ -575,7 +601,9 @@
 									</a>
 									<div class="news-column__body-wrapper">
 										<p class="news-column__date">7 апреля 2019</p>
-										<h2 class="news-column__title">Выбираем SD-карты для съемки</h2>
+										<h2 class="news-column__title">
+											<a href="#">Выбираем SD-карты для съемки</a>
+										</h2>
 										<div class="news-column__text">
 											За исключением отсутствующей системы аэродинамического охлаждения, корпус
 											этого ноутбука почти такой же.
@@ -590,7 +618,9 @@
 									</a>
 									<div class="news-column__body-wrapper">
 										<p class="news-column__date">20 мая 2019</p>
-										<h2 class="news-column__title">Что представила Photokina</h2>
+										<h2 class="news-column__title">
+											<a href="#">Что представила Photokina</a>
+										</h2>
 										<div class="news-column__text">
 											Ноутбук Zephyrus S (GX502) весит 2 кг, а корпус толщиной всего 18,9 мм
 											позволяет легко уместить его в обычный рюкзак.
@@ -605,7 +635,9 @@
 									</a>
 									<div class="news-column__body-wrapper">
 										<p class="news-column__date">14 июня 2019</p>
-										<h2 class="news-column__title">Новинка goPro Hero 5</h2>
+										<h2 class="news-column__title">
+											<a href="#">Новинка goPro Hero 5</a>
+										</h2>
 										<div class="news-column__text">
 											Специальные «легкие» версии приложений для Android GO и отсутствие некоторых
 											предустановленных программ.
@@ -619,7 +651,9 @@
 				</div>
 			</section>
 			<section class="page__map map-block">
-				<div class="map-block__container container">
+				<script type="text/javascript" charset="utf-8" async
+					src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A9d5aa9eec7670c05063d82a76452418fafe50c37752292a4afb5562b6b6a6247&amp;width=100%25&amp;height=400&amp;lang=ru_RU&amp;scroll=true&_v=20220705130518"></script>
+				<!--<div class="map-block__container container">
 					<div class="map-block__body">
 						<h2 class="map-block__title _title">С кем мы работаем</h2>
 						<div class="map-block__items">
@@ -655,7 +689,7 @@
 						src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d8980.681409430748!2d37.644960438603825!3d55.75554288811209!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2sua!4v1652946565779!5m2!1sru!2sua"
 						style="border:0;" allowfullscreen="" loading="lazy"
 						referrerpolicy="no-referrer-when-downgrade"></iframe>
-				</div>
+				</div>-->
 			</section>
 		</main>
 		<footer class="footer">
@@ -691,7 +725,9 @@
                     <div class="other-block__body">
                         <div class="other-block__column">
                             <div class="other-block__text">
-                                <picture><source srcset="./img/logo.webp" type="image/webp"><img src="./img/logo.png" alt="image"></picture>
+                                <a href="#" class="other-block__link">
+                                    <picture><source srcset="./img/logo.webp" type="image/webp"><img src="./img/logo.png" alt="image"></picture>
+                                </a>
                                 <p>Самый удобный в Москве сервис <br> аренды фото, видео и кинотехники</p>
                             </div>
                         </div>
@@ -733,6 +769,89 @@
         </div>
     </section>
 </footer>
+
+<button type="button" class="totop__btn">
+    <span class="_icon-arrow-left"></span>
+</button>
+		<!--<div class="popup" id="popup">
+    <div class="popup__body">
+        <div class="popup__content">
+            <a href="#header" class="popup__close close-popup">x</a>
+            <div class="popup__title">Modal window #1</div>
+            <div class="popup__text">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore quam officia aut maiores magnam animi
+                iusto vitae, minima dicta provident suscipit eum consectetur porro esse eius aliquid recusandae, nostrum
+                officiis! <br>
+                <a href="#popup_2" class="popup-link">Попап №2</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="popup" id="popup_2">
+    <div class="popup__body">
+        <div class="popup__content">
+            <a href="#header" class="popup__close close-popup">x</a>
+            <div class="popup__title">Modal window #2</div>
+            <div class="popup__text">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore quam officia aut maiores magnam animi
+                iusto vitae, minima dicta provident suscipit eum consectetur porro esse eius aliquid recusandae, nostrum
+                officiis!
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore quam officia aut maiores magnam animi
+                iusto vitae, minima dicta provident suscipit eum consectetur porro esse eius aliquid recusandae, nostrum
+                officiis! <br>
+                <a href="#popup" class="popup-link">Попап №1</a>
+            </div>
+        </div>
+    </div>
+</div>-->
+
+<div class="popup popup_regfinish">
+    <div class="popup__content">
+        <div class="popup__body">
+            <article class="login__wrapper">
+                <h2 class="popup__title">Вы уверены, что хотите завершить регистрацию?</h2>
+                <div class="popup__message">
+                    Если вы укажете о себе больше данных, у вас будет возможность арендовать технику со сниженной суммой
+                    залога или без залога вообще.
+                    Если вы все же хотите завершить регистрацию - пожалуйста, дайте согласие на обработку ваших
+                    персональных данных.
+                </div>
+                <div class="popup__checkbox options-checkbox__item checkbox">
+                    Даю согласие на обработку персональных данных
+                    <input type="checkbox" name="follow">
+                </div>
+                <button type="submit" class="popup__btn btn_green">Завершить регистрацию</button>
+                <button type="submit" class="popup__btn btn_white">Отмена</button>
+            </article>
+            <div class="popup__close"><span>+</span></div>
+        </div>
+    </div>
+</div>
+
+<div class="popup popup__callback">
+    <div class="popup__content">
+        <div class="popup__body">
+            <article class="login__wrapper">
+                <h2 class="popup__title">Укажите свои данные, чтобы мы могли связаться с Вами:</h2>
+                <div class="form-personal__item_short">
+                    <label for="name">Имя</label>
+                    <input type="text" name="name">
+                </div>
+                <div class="form-personal__item_short">
+                    <label for="email">Email</label>
+                    <input type="email" name="email">
+                </div>
+                <div class="form-personal__item_short">
+                    <label for="phone">Телефон</label>
+                    <input type="tel" name="phone">
+                </div>
+                <button type="submit" class="popup__btn btn_green">Отправить</button>
+            </article>
+            <div class="popup__close"><span>+</span></div>
+        </div>
+    </div>
+</div>
 	</div>
 
 	<div class="popup popup_massagename-message">
@@ -752,9 +871,11 @@
 	</div>
 
 	<!-- Swiper -->
-	<!-- <script src="https://unpkg.com/swiper/swiper-bundle.min.js?_v=20220525112835"></script> -->
-	<script src="js/vendors.min.js?_v=20220525112835"></script>
-	<script src="js/app.min.js?_v=20220525112835"></script>
+	<!-- <script src="https://unpkg.com/swiper/swiper-bundle.min.js?_v=20220705130518"></script> -->
+	<script src="js/vendors.min.js?_v=20220705130518"></script>
+	<script src="js/jquery.js?_v=20220705130518"></script>
+	<script src="js/jquery.datetimepicker.full.min.js?_v=20220705130518"></script>
+	<script src="js/app.min.js?_v=20220705130518"></script>
 </body>
 
 </html>
